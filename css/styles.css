@@ -1,0 +1,198 @@
+/* ----------------
+|      Variables   |
+-------------------*/
+:root {
+    /*Colors*/
+    --color-one: #0049B4;
+    --color-two: #6495ED;
+    --color-three: #E6F4F1;
+    --color-four: #EEE8A9;
+    /*more*/
+    --main-color: #f2debb;
+    --primary-color: #c4c4c4;
+    --secondary-color: #f9f9f9;
+}
+
+/* ----------------
+|      Reset       |
+-------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------
+|   Main Styling   |
+-------------------*/
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+hr{
+  width: 80%;
+}
+/* ----------------
+|      Nav         |
+-------------------*/
+
+nav {
+    background-color: white;
+    position: fixed;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li{
+    margin: 0px 40px;
+}
+
+/* ----------------
+|      Header      |
+-------------------*/
+
+header {
+	background: url('https://pixabay.com/get/g21918a6bc0e7186cd0f0dad048657d387b4e10e37a6d95d0ee22dc535111ff97e5579d8d2bde4d6bae58bcd7eeb1616c34b57c684bc625fb21fe1c5f449fd1df57be4efde5096d51bf200d1b0c08c5bf_1920.jpg');
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 25%;
+}
+
+header .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 135deg, #0048b465 10%, #6494ed63 100%);
+	
+}
+
+h1 {
+	margin-bottom: 30px;
+}
+
+h2, p {
+	margin-bottom: 30px;
+}
+
+.btn-about {
+	border-radius: 10px;
+    border-color: var(--color-one);
+	outline: none;
+	padding: 10px 20px;
+	color: var(--color-one);
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+}
+.btn-about :hover{
+	cursor: pointer;
+    color: white;
+    background-color: #0049B4;
+}
+
+
+/* ----------------
+|   About us page   |
+-------------------*/
+
+/* Valores, Misión y Visión */
+.mision {
+ text-align: center;
+}
+
+/* Tarjetas de participantes */
+
+.title-team {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+
+}
+
+.bodyColor{
+  background-color: black;
+}
+  
+  #img1, #img2, #img3, #img4, #img5, #img6, #img7{
+      width: 150px;
+      height: 150px;
+      border-radius: 75px;
+  }
+
+
+
+  .flip-card {
+    background-color: transparent;
+    width: 409px;
+    height: 190px;
+    border-radius: 20px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    background: #EEE8A9;
+    
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #EEE8a9;
+    color: black;
+  }
+
+  .flip-card-back {
+    
+    background-color: #EEE8A9;
+    color: black;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+    
+  }
+
+  
+
+
+
+  
+  
+  
+
+  
