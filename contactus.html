@@ -1,4 +1,4 @@
-<!doctype html>
+<form action=""></form><!doctype html>
 <html lang="en">
 
 <head>
@@ -38,7 +38,7 @@
     </header>
     <main class="container">
         <form id="form" class="contact_form">
-            <div class="alert alert-danger" role="alert" id="alertError" style="display: none;"></div>
+            
             <div class="mb-3">
                 <label for="nombre_id" class="nombre">Nombre</label>
                 <input type="text" class="input-group-text" id="nombre_id" name="nombre">
@@ -52,12 +52,15 @@
                 <input type="text" class="input-group-text" id="telefono_id" name="telefono">
             </div>
             <div class="mb-3">
-                <label for="mensaje_id" class="mensaje">Mensaje</label>
-                <textarea class="input-group-text" id="input-group-text" rows="3" name="mensaje"></textarea>
-            </div>
+                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
             <input type="submit"class = "btn btn-success" id="btnEnviar" value="Enviar mensaje" >
+            <div class="alert alert-primary" role="alert" id="alertError" style="display:none ;"></div>>
+       
         </form>
     </main>
+    
 
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-white text-muted">
