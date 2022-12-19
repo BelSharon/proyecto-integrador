@@ -1,4 +1,4 @@
-<form action=""></form><!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -38,7 +38,7 @@
     </header>
     <main class="container">
         <form id="form" class="contact_form">
-            
+            <div class="alert alert-danger" role="alert" id="alertError" style="display: none;"></div>
             <div class="mb-3">
                 <label for="nombre_id" class="nombre">Nombre</label>
                 <input type="text" class="input-group-text" id="nombre_id" name="nombre">
@@ -52,15 +52,13 @@
                 <input type="text" class="input-group-text" id="telefono_id" name="telefono">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-            <input type="submit"class = "btn btn-success" id="btnEnviar" value="Enviar mensaje" >
-            <div class="alert alert-primary" role="alert" id="alertError" style="display:none ;"></div>>
-       
+                <label for="mensaje_id" class="mensaje">Mensaje</label>
+                <textarea class="input-group-text" id="mensaje_id" rows="3" name="mensaje"></textarea>
+            </div>
+            <div class="alert alert-primary" role="alert" id = "alertCorrecto" style="display: none;"></div>
+            <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
         </form>
     </main>
-    
 
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-white text-muted">
@@ -151,9 +149,13 @@
     </footer>
     <!-- Footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
     <script src="/js/contact.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">emailjs.init('jJ4HbW9g_d3LYNiM0')</script>
+
+    <script type="text/javascript">emailjs.init('uKJzUL8mPlSXuU2N2')</script>
 </body>
+
 </html>
