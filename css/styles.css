@@ -13,13 +13,14 @@
     --secondary-color: #f9f9f9;
 }
 
+
 /* ----------------
 |      Reset       |
 -------------------*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ----------------
@@ -27,37 +28,37 @@
 -------------------*/
 
 body {
-    font-family: "Poppins", sans-serif;
-    font-weight: normal;
-    font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 
 hr{
-  width: 80%;
+width: 80%;
 }
 /* ----------------
 |      Nav         |
 -------------------*/
 
 nav {
-    background-color: white;
-    position: fixed;
+  background-color: white;
+  position: fixed;
 }
 
 nav ul {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul li{
-    margin: 0px 40px;
+  margin: 0px 40px;
 }
 
 /* ----------------
@@ -65,49 +66,49 @@ nav ul li{
 -------------------*/
 
 header {
-	background: url('../assets/background.jpg');
-	text-align: center;
-	width: 100%;
-	height: auto;
-	background-size: cover;
-	background-attachment: fixed;
-	position: relative;
-	overflow: hidden;
-	border-radius: 0 0 85% 85% / 25%;
+background: url('../assets/background.jpg');
+text-align: center;
+width: 100%;
+height: auto;
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+overflow: hidden;
+border-radius: 0 0 85% 85% / 25%;
 }
 
 header .overlay{
-	width: 100%;
-	height: 100%;
-	padding: 50px;
-	color: #FFF;
-	text-shadow: 1px 1px 1px #333;
-  background-image: linear-gradient( 135deg, #0048b465 10%, #6494ed63 100%);
-	
+width: 100%;
+height: 100%;
+padding: 50px;
+color: #FFF;
+text-shadow: 1px 1px 1px #333;
+background-image: linear-gradient( 135deg, #0048b465 10%, #6494ed63 100%);
+
 }
 
 h1 {
-	margin-bottom: 30px;
+margin-bottom: 30px;
 }
 
 h2, p {
-	margin-bottom: 30px;
+margin-bottom: 30px;
 }
 
 .btn-about {
-	border-radius: 10px;
-    border-color: var(--color-one);
-	outline: none;
-	padding: 10px 20px;
-	color: var(--color-one);
-	background: #fff;
-	margin-bottom: 50px;
-	box-shadow: 0 3px 20px 0 #0000003b;
+border-radius: 10px;
+  border-color: var(--color-one);
+outline: none;
+padding: 10px 20px;
+color: var(--color-one);
+background: #fff;
+margin-bottom: 50px;
+box-shadow: 0 3px 20px 0 #0000003b;
 }
 .btn-about :hover{
-	cursor: pointer;
-    color: white;
-    background-color: #0049B4;
+cursor: pointer;
+  color: white;
+  background-color: #0049B4;
 }
 
 
@@ -117,98 +118,118 @@ h2, p {
 
 /* Valores, Misión y Visión */
 .mision {
- text-align: center;
+text-align: center;
 }
 
 /* Tarjetas de participantes */
 
 .title-team {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
+margin-top: 50px;
+margin-bottom: 50px;
+text-align: center;
 
 }
 
 .bodyColor{
-  background-color: black;
+background-color: black;
 }
-  
- 
+
 #img1, #img2, #img3, #img4, #img5, #img6, #img7{
     
-  width: 150px;
-  height: 150px;
-  /* border-radius: 25px 0 15px 50px; */
-  box-shadow: 3px 3px 3px 2px rgba(20, 10, 213, 0.2);
-  border-radius: 75px;
-
+    width: 150px;
+    height: 150px;
+    /* border-radius: 25px 0 15px 50px; */
+    box-shadow: 3px 3px 3px 2px rgba(20, 10, 213, 0.2);
+    border-radius: 75px;
+ 
 }
 
 .card-title{
-color: var(--color-one);
-font-weight: bold;
-font-size: 32px;
+  color: var(--color-one);
+  font-weight: bold;
+  font-size: 32px;
 }
 
 .flip-card {
-background-color: transparent;
-width: 500px;
-height: 210px;
-border-radius: 20px;
-perspective: 1000px; /* Remove this if you don't want the 3D effect */
-background: var(--color-three);
-box-shadow: 0 27px 55px 0 rgba(0, 0, 0, .7), 0 17px 17px 0 rgba(0,0,0,.5);
-
+  background-color: transparent;
+  width: 500px;
+  height: 210px;
+  border-radius: 20px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  background: var(--color-three);
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, .7), 0 17px 17px 0 rgba(0,0,0,.5);
+  
 }
 
 .flip-card-inner {
-position: relative;
-width: 100%;
-height: 100%;
-text-align: center;
-transition: transform 0.8s;
-transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
 
 .flip-card:hover .flip-card-inner {
-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .flip-card-front, .flip-card-back {
-position: absolute;
-width: 100%;
-height: 100%;
--webkit-backface-visibility: hidden; /* Safari */
-backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 }
 
 /* .flip-card-front {
-
-color: white;
+ 
+  color: white;
 } */
 
 .flip-card-back {
-
-background-color: var(--color-two);
-padding-top: 30px;
-color: white;
-transform: rotateY(180deg);
-border-radius: 20px;
-
-}
-
   
-
-  }
-
-  @media screen and (max-width: 767px) {
-    .container .footer{
-        display: grid;
-    }
+  background-color: var(--color-two);
+  padding-top: 30px;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 20px;
+  
 }
 
 
+i{
+  
+ width: 100px;
+  color: white;
+ 
+}
+
+i:hover{
+  color: black;
+}
+
+
+.card2{
+  padding-left: 800px;
+    
+} */
+
+
+
+.Right{
+  float: right;
+  margin-bottom: 100px;
+
+}
+
+@media screen and (max-width:800px)  {
+ .card2 {
+  
+    padding:50px 0px 50px  0px;
+  }
+}
 
 
 
