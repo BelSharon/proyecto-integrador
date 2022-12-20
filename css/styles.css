@@ -187,7 +187,10 @@ h2, p {
     
   }
 
-  
+  .btn-form {
+    align-items: flex-end;
+  }
+
 
 
 

@@ -37,27 +37,36 @@
         </nav>
     </header>
     <main class="container">
-        <form id="form" class="contact_form">
-            <div class="alert alert-danger" role="alert" id="alertError" style="display: none;"></div>
-            <div class="mb-3">
-                <label for="nombre_id" class="nombre">Nombre</label>
-                <input type="text" class="input-group-text" id="nombre_id" name="nombre">
+        <div class="row">
+            <div class="col">
+                <img src="./assets/img/Contacto.PNG" alt="Contactanos">
             </div>
-            <div class="mb-3">
-                <label for="email_id" class="correo">Correo electrónico</label>
-                <input type="email" class="input-group-text" id="email_id" name="correo">
+            <div class="col">
+                <form id="form" class="contact_form">
+                    <div class="alert alert-danger" role="alert" id="alertError" style="display: none;"></div>
+                    <div class="mb-3 row">
+                        <label for="nombre_id" class="form-label nombre">Nombre</label>
+                        <input type="text" class="form-control input-group-text" id="nombre_id" name="nombre">
+                    </div>
+                    <div class="mb-3 row" >
+                        <label for="email_id" class="form-label correo">Correo electrónico</label>
+                        <input type="email" class="form-control input-group-text" id="email_id" name="correo">
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="telefono_id" class="form-label telefono">Teléfono</label>
+                        <input type="text" class="form-control input-group-text" id="telefono_id" name="telefono">
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="mensaje_id" class="form-label mensaje">Mensaje</label>
+                        <textarea class="form-control input-group-text" id="mensaje_id" rows="3" name="mensaje"></textarea>
+                    </div>
+                    <div class="alert alert-primary" role="alert" id = "alertCorrecto" style="display: none;"></div>
+                    <div class="row justify-content-end">
+                        <button type="submit" class="btn btn-primary col-lg-3" id="btnEnviar">Enviar</button>
+                    </div>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="telefono_id" class="telefono">Teléfono</label>
-                <input type="text" class="input-group-text" id="telefono_id" name="telefono">
-            </div>
-            <div class="mb-3">
-                <label for="mensaje_id" class="mensaje">Mensaje</label>
-                <textarea class="input-group-text" id="mensaje_id" rows="3" name="mensaje"></textarea>
-            </div>
-            <div class="alert alert-primary" role="alert" id = "alertCorrecto" style="display: none;"></div>
-            <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
-        </form>
+        </div>        
     </main>
 
     <!-- Footer -->
