@@ -65,7 +65,7 @@ nav ul li{
 -------------------*/
 
 header {
-	background: url('https://pixabay.com/get/g21918a6bc0e7186cd0f0dad048657d387b4e10e37a6d95d0ee22dc535111ff97e5579d8d2bde4d6bae58bcd7eeb1616c34b57c684bc625fb21fe1c5f449fd1df57be4efde5096d51bf200d1b0c08c5bf_1920.jpg');
+	background: url('../assets/background.jpg');
 	text-align: center;
 	width: 100%;
 	height: auto;
@@ -134,20 +134,29 @@ h2, p {
 }
   
   #img1, #img2, #img3, #img4, #img5, #img6, #img7{
+      
       width: 150px;
       height: 150px;
+      /* border-radius: 25px 0 15px 50px; */
+      box-shadow: 3px 3px 3px 2px rgba(20, 10, 213, 0.2);
       border-radius: 75px;
+   
   }
 
-
+  .card-title{
+    color: var(--color-one);
+    font-weight: bold;
+    font-size: 32px;
+  }
 
   .flip-card {
     background-color: transparent;
-    width: 409px;
-    height: 190px;
+    width: 500px;
+    height: 210px;
     border-radius: 20px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    background: #EEE8A9;
+    background: var(--color-three);
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, .7), 0 17px 17px 0 rgba(0,0,0,.5);
     
   }
 
@@ -173,26 +182,57 @@ h2, p {
     backface-visibility: hidden;
   }
 
-  .flip-card-front {
-    background-color: #EEE8a9;
-    color: black;
-  }
+  /* .flip-card-front {
+   
+    color: white;
+  } */
 
   .flip-card-back {
     
-    background-color: #EEE8A9;
-    color: black;
+    background-color: var(--color-two);
+    padding-top: 30px;
+    color: white;
     transform: rotateY(180deg);
     border-radius: 20px;
     
   }
 
   
+  i{
+    
+   width: 100px;
+    color: white;
+   
+  }
+
+  i:hover{
+    color: black;
+  }
 
 
+  .card2{
+    padding-left: 800px;
+      
+  } */
 
   
   
+  .Right{
+    float: right;
+    margin-bottom: 100px;
   
+  }
+
+  @media screen and (max-width:800px)  {
+   .card2 {
+    
+      padding:50px 0px 50px  0px;
+     
+    }
+  }
+
+
+
+
 
   
