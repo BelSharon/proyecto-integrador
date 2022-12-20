@@ -202,6 +202,12 @@ h2, p {
     border-radius: 25px;
   }
 
+  #idContactanos{
+    text-align: center;
+    color: #6495ED;
+
+  }
+
   @media screen and (max-width: 767px) {
     .container .footer{
         display: grid;
