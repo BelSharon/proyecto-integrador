@@ -30,7 +30,7 @@ document.getElementById('form')
             mensaje.style.border = "solid green 1px" // color verde al  estar correcto
             validos++;
         }
-        if (nombre.value.length<8) {
+        if (nombre.value.length<3) {
             alertError.style.display="block";
             alertError.innerHTML += "<br>El Nombre no es válido.";
             nombre.style.border="solid red 1px"
