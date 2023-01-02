@@ -258,3 +258,76 @@ i:hover{
     text-align:center;
     color:var(--color-two);
   }
+
+  #imgTest{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 30px;
+  }
+
+
+  /*
+  Establezco el valor del boton en display y block, para que abarque todo el ancho disponible
+  y el margin en auto para centrarlo de forma horizontal al contonedor
+  */
+
+  button#btnEnviar {
+    display: block;
+    margin: auto;
+  }
+
+  /*
+  Añado un padding al valor por defecto en una PC en el formulario
+  */
+  #formTest{
+    padding-right: 30px;
+  }
+
+  /*
+ Esto hará que la imagen se ajuste 
+ al ancho y al alto del contenedor sin distorsión y mantenga su 
+ proporción de aspecto original cuando la pantalla tenga un ancho de menos de 768px.
+
+ El display flex en el rowContainer es una regla para el contenedor padre
+ y con la propiedad flex-direction:colum indico que los elementos 
+ se deben apilarse en columnas en lugar de filas y así hago el efecto de que la imagen
+ se coloque encima del formulario en dispositivos pequeños
+
+ En el #imgTest la propiedad order -1 se mostrara antes que el elemento que tenga order 1
+ en este caso el formulario
+ El max-width 100% permite que la imagen se ajuste al ancho del contenedor,
+ y para que tenga su proporcion original uso el height:auto y para que no se distorcione
+ uso el object-fit: contain
+  */
+
+  @media (max-width: 768px) {
+    #rowContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    #imgTest {
+      order: -1;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      padding: 30px;
+    }
+  
+    #formTest{
+      order: 1;
+      padding: 30px;
+      
+    }
+    
+    /*
+    Los dos puntos  "::" en esta parte significa que le estoy dando un estilo a una 
+    parte en especifico que es el placeholder del input, y con el text-aling:left
+    hago que las letras del placeholder se vayan al inicio del label. 
+    */
+    input::placeholder {
+      text-align: left;
+    }
+    
+  }
