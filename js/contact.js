@@ -5,7 +5,7 @@ document.getElementById('form')
         //btnEnviar.value = 'Enviando...';
         const serviceID = 'default_service';
         const templateID = 'template_wp16ogc';
-        emailjs.sendForm(serviceID, templateID, this)
+        emailjs.sendForm(serviceID, templateID, this);
         let validos = 0;
         let idTimeout;
         let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
