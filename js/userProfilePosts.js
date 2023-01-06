@@ -1,3 +1,11 @@
+let publicacion = new Array();
+    
+function addItem(item){
+publicacion.push(item)
+localStorage.setItem('publicacion', JSON.stringify(publicacion))      
+console.log(publicacion);
+} 
+
 let contador = 1;
 
 function addItem(item){
