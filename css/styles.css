@@ -2,25 +2,28 @@
 |      Variables   |
 -------------------*/
 :root {
-    /*Colors*/
-    --color-one: #0049B4;
-    --color-two: #6495ED;
-    --color-three: #E6F4F1;
-    --color-four: #EEE8A9;
-    /*more*/
-    --main-color: #f2debb;
-    --primary-color: #c4c4c4;
-    --secondary-color: #f9f9f9;
+  /Colors/
+  --color-one: #0049B4;
+  --color-two: #6495ED;
+  --color-three: #E6F4F1;
+  --color-four: #EEE8A9;
+  /more/
+  --main-color: #f2debb;
+  --primary-color: #c4c4c4;
+  --secondary-color: #f9f9f9;
 }
+
 
 
 /* ----------------
 |      Reset       |
 -------------------*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+
 }
 
 /* ----------------
@@ -28,38 +31,32 @@
 -------------------*/
 
 body {
-  overflow-x: hidden;
-  font-family: "Poppins", sans-serif;
-  font-weight: normal;
-  font-size: 18px;
+
+overflow-x: hidden;
+justify-content: center;
+align-items: center;
+min-height: 100hv;
 }
 
-h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-}
 
-hr{
-width: 80%;
-}
 /* ----------------
 |      Nav         |
 -------------------*/
 
 nav {
-  background-color: white;
-  position: fixed;
+background-color: white;
+position: fixed;
 }
 
 nav ul {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 nav ul li{
-  margin: 0px 40px;
+margin: 0px 40px;
 }
 
 /* ----------------
@@ -98,7 +95,7 @@ margin-bottom: 30px;
 
 .btn-about {
 border-radius: 10px;
-  border-color: var(--color-one);
+border-color: var(--color-one);
 outline: none;
 padding: 10px 20px;
 color: var(--color-one);
@@ -108,8 +105,8 @@ box-shadow: 0 3px 20px 0 #0000003b;
 }
 .btn-about :hover{
 cursor: pointer;
-  color: white;
-  background-color: #0049B4;
+color: white;
+background-color: #0049B4;
 }
 
 
@@ -117,12 +114,6 @@ cursor: pointer;
 |   About us page   |
 -------------------*/
 
-/* Valores, Misión y Visión */
-.mision {
-text-align: center;
-}
-
-/* Tarjetas de participantes */
 
 .title-team {
 margin-top: 50px;
@@ -131,105 +122,165 @@ text-align: center;
 
 }
 
-.bodyColor{
-background-color: black;
+/* Valores, Misión y Visión */
+.mision {
+text-align: center;
+
 }
 
-#img1, #img2, #img3, #img4, #img5, #img6, #img7{
-    
-    width: 150px;
-    height: 150px;
-    /* border-radius: 25px 0 15px 50px; */
-    box-shadow: 3px 3px 3px 2px rgba(20, 10, 213, 0.2);
-    border-radius: 75px;
- 
-}
+/* Tarjetas de participantes */
 
-.card-title{
-  color: var(--color-one);
-  font-weight: bold;
-  font-size: 32px;
-}
 
-.flip-card {
-  background-color: transparent;
-  width: 500px;
-  height: 210px;
-  border-radius: 20px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  background: var(--color-three);
-  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, .7), 0 17px 17px 0 rgba(0,0,0,.5);
-  
-}
+/* ----------------
+|      Cards         |
+-------------------*/
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.container{
+
+position: relative;
+width: 1000px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+margin: 20px;
+
 }
 
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.container .card1{
+position: relative;
+height: 270px;
+background: #fff;
+display: flex;
+width: 39%;
+margin: 45px 0;
 }
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+.container .card1 .imgBx{
+border-radius: 20px;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgb(190, 226, 249);
+z-index: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+transition: 0.5s ease-in-out;
 }
 
-/* .flip-card-front {
- 
-  color: white;
-} */
+.container .card1:hover .imgBx{
 
-.flip-card-back {
-  
-  background-color: var(--color-two);
-  padding-top: 30px;
-  color: white;
-  transform: rotateY(180deg);
-  border-radius: 20px; 
+width: 150px;
+height: 150px;
+left: -75px;
+top: calc(50% - 75px);
+transition: 0.5s ease-in-out;
+background: #fff;
 }
 
+.container .card1 .imgBx:before{
+
+content: attr(data-text);
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+text-align: center;
+font-size: 6em;
+color: rgba(0, 0, 0, 0.038);
+font-weight: 700;
+}
+
+.container .card1 .imgBx img{
+border-radius: 10%;
+max-width: 200px;
+transition: 0.5s ease-in-out;
+
+}
+
+.container .card1:hover .imgBx img{
+max-width: 100px;
+
+}
+
+.container .card1 .content{
+position:absolute;
+right: 0;
+width: calc(100% - 75px);
+height: 100%;
+padding: 10px;
+display: flex;
+align-items: center;
+}
+
+.container .card1 .content h3{
+color: rgb(15, 15, 125);
+align-items: center;
+margin-bottom: 8px;
+font-size: 24px;
+
+}
+
+@media (max-width: 992px){
+.container{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.container .card1{
+    width: 400px;
+}
+}
+
+@media (max-width: 768px){
+.container .card1{
+   max-width: 300px;
+   flex-direction: column;
+   height: auto;
+}
+
+.container .card1 .imgBx{
+   position: relative;
+}
+
+.container .card1 .imgBx, 
+.container .card1:hover .imgBx{
+    width: 100%;
+    height: 250px;
+    left: 0;
+ }
+
+.container .card1 .imgBx img, 
+.container .card1:hover .imgBx img{
+    max-width: 100px;
+}
+
+.container .card1 .content{
+    position: relative;
+    width: 100%;
+}
+}
 
 i{
-  
- width: 100px;
-  color: white;
- 
+
+width: 50px;
+ color: rgb(0, 0, 2);
+
 }
 
 i:hover{
-  color: black;
+color: rgb(3,159,187);
 }
 
 
-.card2{
-  padding-left: 800px;
-    
-} */
 
-
-
-.Right{
-  float: right;
-  margin-bottom: 100px;
-
-}
-
-@media screen and (max-width:800px)  {
- .card2 {
-  
-    padding:50px 0px 50px  0px;
-  }
-}
+/* ----------------
+|   Contact us page   |
+-------------------*/
 
 
 
@@ -276,6 +327,7 @@ i:hover{
   button#btnEnviar {
     display: block;
     margin: auto;
+    margin-bottom: 10px;
   }
 
   /*
