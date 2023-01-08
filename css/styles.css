@@ -28,6 +28,7 @@
 -------------------*/
 
 body {
+  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-size: 18px;
