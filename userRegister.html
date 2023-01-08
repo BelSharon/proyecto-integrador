@@ -33,7 +33,53 @@
             </div>
         </nav>
         </header>  
-        
+
+        <main class="container">
+            <div class="row" id="rowContainer">
+                <div class="col" id="colContainer">
+                    <img src="./assets/img/register-img.jpeg" alt="Registro" id="imgTest">
+                </div>
+                <div class="col" id="formTest">
+                    <h1 id="idRegistro">Registro</h1>
+                    <form id="form" class="contact_form">
+                        <div class="alert alert-danger" role="alert" id="alertError" style="display: none;"></div>
+                        <div class="mb-3 row">
+                            <label for="nombre_id" class="form-label nombre">Nombre</label>
+                            <input type="text" class="form-control input-group-text" style="text-align: left;" id="nombre_id" name="nombre" placeholder="Ingresa tu nombre">
+                        </div>
+                        <div class="mb-3 row" >
+                            <label for="apellido_id" class="form-label apellido">Apellido</label>
+                            <input type="text" class="form-control input-group-text" style="text-align: left;" id="apellido_id" name="apellido" placeholder="Ingresa tu apellido">
+                        </div>
+                        <div class="mb-3 row">
+                            <select class="form-select sexo" aria-label="Default select example" id="sexo_id">
+                                <option selected>Sexo</option>
+                                <option value="1">Femenino</option>
+                                <option value="2">Masculino</option>
+                                <option value="3">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="correo_id" class="form-label correo">Correo electrónico</label>
+                            <input type="text" class="form-control input-group-text" style="text-align: left;" id="correo_id" name="correo" placeholder="Ingresa correo electrónico">
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="telefono_id" class="form-label telefono">Teléfono</label>
+                            <input type="text" class="form-control input-group-text" style="text-align: left;" id="telefono_id" name="telefono" placeholder="Ingresa tu teléfono">
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="fecha_id" class="form-label fecha">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control input-group-text" style="text-align: left;" id="fecha_id" name="fecha" placeholder="Ingresa tu fecha de nacimiento">
+                        </div>
+                        <div class="alert alert-primary" role="alert" id = "alertCorrecto" style="display: none;"></div>
+                        <div class="row">
+                            <button type="submit" class="btn btn-primary col-lg-3" id="btnEnviar">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>        
+        </main>
+
         <!-- Footer -->
     <footer class="text-center text-lg-start bg-white text-muted">
         <!-- Section: Social media -->
