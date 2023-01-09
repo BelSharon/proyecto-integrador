@@ -1,6 +1,5 @@
-const btnEnviar = document.getElementById('btnEnviar');
-document.getElementById('form')
-    .addEventListener('submit', function (event) {
+    const btnEnviar = document.getElementById('btnEnviar');
+        document.getElementById('form').addEventListener('submit', function (event) {
         event.preventDefault();
 
         let validos = 0;
@@ -61,7 +60,7 @@ document.getElementById('form')
 
         validarCampo(nombre, "El Nombre", /.{3,}/);
         validarCampo(apellido, "El Apellido", /.{3,}/);
-        validarCampo(password, "La contraseña", /.{1,}/);
+        validarCampo(password, "La contraseña", /.{5,}/);
         validarCampo(correo, "El correo electrónico", emailRegex);
         validarCampo(telefono, "El teléfono", /[0-9]{10}/);
 
