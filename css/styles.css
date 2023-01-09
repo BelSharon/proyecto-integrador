@@ -1,6 +1,7 @@
 /* ----------------
 |      Variables   |
 -------------------*/
+/*
 :root {
   /Colors/
   --color-one: #0049B4;
@@ -12,7 +13,7 @@
   --primary-color: #c4c4c4;
   --secondary-color: #f9f9f9;
 }
-
+*/
 
 
 /* ----------------
@@ -455,3 +456,4 @@ Diseños de la página del perfil
 .mainContainer img {
   transition: all 0.5s ease-in-out;
 }
+
