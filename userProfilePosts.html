@@ -53,6 +53,67 @@
         -->
     </div>
     
+<!--Nueva publicación-->
+<div class="accordion" id="accordionExample"> 
+    <div class="accordion-item"> 
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Nueva Publicación
+        </button>
+      </h2>
+      <div class="container" id="genCont"> 
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body"> 
+            <div class="container" id="newPost">
+                <div class="container" id="containerImgPost"><!--Imagen-->
+                        <br/><br/>
+                        <div>
+                          <form id="form2">
+                              <div class="form-group">
+                                <label for="fileImage">Selecciona una imagen:</label>
+                                <input type="button" class="form-control btn-primary" value="Subir imagen" id="btnFake"> 
+                                
+                                <input type="file" class="form-control-file" id="fileImage" style="display:none">
+                              </div>
+                            </form>
+                        </div>
+                        <div>
+                            <img id="imageFile" name="imageFile" src=""  />
+                        </div>
+                        <div>
+                          <textarea rows="20" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></textarea>
+                        </div>
+                </div>
+
+                <div class="container" id="containerTituloPost">  <!--titulo-->
+                <form id="form" class="contact_form">
+                <div class="alert alert-danger" role="alert" id="alertError" style="display: none;"></div>
+                <div>
+                    <label for="titulo_id" class="form-label titulo">Título</label>
+                    <input type="text" class="form-control input-group-text" style="text-align: left;" id="titulo_id" name="titulo" placeholder="Ingresa el titulo">
+                </div>
+                </div>
+                
+                <div class="container"
+                id="containerDescriptionPost"> <!--descripción-->
+                    <label for="publicacion_id" class="form-label mensaje">Publicación</label>
+                    <textarea class="form-control input-group-text" style="text-align: left;" id="publicacion_id" rows="3" name="publicacion" placeholder="Ingresa una descripcion"></textarea>
+            
+                <div class="alert alert-primary" role="alert" id = "alertCorrecto" style="display: none;"></div>
+                
+                <div>
+                    <button type="submit" class="btn btn-primary" id="btnEnviarPost">Publicar</button>
+                </div>
+            </div>
+                </form>
+        </div>
+     </div>
+    </div>
+</div>
+</div>
+</div>
+<br>
+
     <div class="container" id="contImagenes"> 
         
         <h2 class="text-center">Mis trabajos</h2>      
@@ -159,7 +220,8 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
-       <script src="./js/userProfilePosts.js"></script>
+    <script src="./js/publicaciones.js"></script>
+    <script src="./js/userProfilePosts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

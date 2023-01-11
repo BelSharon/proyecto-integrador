@@ -455,3 +455,41 @@ Diseños de la página del perfil
   transition: all 0.5s ease-in-out;
 }
 
+/* ---------------------------
+Estilos para nueva publicación
+------------------------------*/
+.accordion{
+  margin: 30px;
+}
+
+#genCont{
+  display: grid;
+  grid-template-areas:
+  "img titulo"
+  "img descrip";
+}
+#containerImgPost{
+  grid-area: img;
+}
+
+#containerTituloPost{
+  grid-area: titulo;
+}
+
+#containerDescriptionPost{
+  grid-area: descrip;
+}
+
+#btnFake{
+  box-sizing: content-box;
+  margin: 5px;
+}
+
+#btnEnviarPost{
+  box-sizing: content-box;
+  margin: 5px;
+}
+
+#contTrabajos{
+  margin: 30px;
+}
