@@ -40,7 +40,7 @@ document.getElementById('form')
         }
         if (correo.value.match(emailRegex)==null) {
             alertError.style.display="block";
-            alertError.innerHTML += "<br>El correo electónivo no es válido.";
+            alertError.innerHTML += "<br>El correo electrónico no es válido.";
             correo.style.border="solid red 1px"
         }else{
             correo.style.border="solid green 1px"
@@ -50,7 +50,7 @@ document.getElementById('form')
         let numRegex = /[0-9]{10}/;
         if (telefono.value.match(numRegex) == null) {
             alertError.style.display = "block";
-            alertError.innerHTML += "<br>El teléfono no es valido.";
+            alertError.innerHTML += "<br>El teléfono no es válido.";
             telefono.style.border = "solid red 1px"
         } else {
             telefono.style.border = "solid green 1px"
