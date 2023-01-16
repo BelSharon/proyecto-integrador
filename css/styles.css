@@ -498,3 +498,15 @@ Estilos para nueva publicación
 #contTrabajos{
   margin: 30px;
 }
+/* ---------------------------
+Estilos para página inicio de sesión
+------------------------------*/
+
+.recordar{
+  margin: -5px 0 20px 5px;
+  color: blue;
+  cursor: pointer;
+}
+.recordar:hover{
+  text-decoration: underline;
+}
