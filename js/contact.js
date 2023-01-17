@@ -32,7 +32,7 @@ document.getElementById('form')
         }
         if (nombre.value.length<3) {
             alertError.style.display="block";
-            alertError.innerHTML += "<br>El Nombre no es válido.";
+            alertError.innerHTML += "<br>El nombre no es válido.";
             nombre.style.border="solid red 1px"
         }else{
             nombre.style.border="solid green 1px"

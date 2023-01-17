@@ -242,7 +242,7 @@ font-size: 24px;
 }
 }
 
-@media (max-width: 768px){
+@media (max-width: 991px){
 .container .card1{
    max-width: 300px;
    flex-direction: column;
