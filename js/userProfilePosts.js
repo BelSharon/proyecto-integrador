@@ -1,11 +1,5 @@
 let publicacion = new Array();
     
-function addItem(item){
-publicacion.push(item)
-localStorage.setItem('publicacion', JSON.stringify(publicacion))      
-console.log(publicacion);
-} 
-
 let contador = 1;
 
 function addItem(item){
@@ -29,6 +23,12 @@ function addItem(item){
         const itemsContainer = document.getElementById("list-items");
         itemsContainer.innerHTML += itemHTML;  
         contador++  
+
+        publicacion.push(item)
+        localStorage.setItem('publicacion', JSON.stringify(publicacion))      
+        console.log(publicacion);publicacion.push(item)
+        localStorage.setItem('publicacion', JSON.stringify(publicacion))      
+        console.log(publicacion);
     }
 
 addItem({'name':'Mi primer publicación',
