@@ -20,7 +20,7 @@
     
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./home.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="./aboutus.html">Sobre nosotros</a></li>
                         <li class="nav-item"><a class="nav-link" href="./categories.html">Categoría</a></li>
                         <li class="nav-item"><a class="nav-link" href="./contactus.html">Contacto</a></li>
@@ -46,19 +46,25 @@
                         <div class="mb-3 row">
                             <label for="nombre_id" class="form-label nombre">Nombre</label>
                             <input type="text" class="form-control input-group-text" style="text-align: left;" id="nombre_id" name="nombre" placeholder="Ingresa tu nombre">
+                            <p id="error_nombre_id" class="error">El nombre es obligatorio</p>
+                            <p id="error_nombre_id2" class="error">El nombre debe contener mas de 3 caracteres</p>
                         </div>
                         <div class="mb-3 row" >
                             <label for="apellido_id" class="form-label apellido">Apellido</label>
                             <input type="text" class="form-control input-group-text" style="text-align: left;" id="apellido_id" name="apellido" placeholder="Ingresa tu apellido">
+                            <p id="error_apellido_id" class="error">El apellido es obligatorio</p>
+                            <p id="error_apellido_id2" class="error">El apellido debe contener mas de 3 caracteres</p>
                         </div>
                         <div class="mb-3 row">
                             <label for="password_id" class="form-label password">Contraseña</label>
                             <input type="password" class="form-control input-group-text" style="text-align: left;" id="password_id" name="password" placeholder="Ingresa tu contraseña">
-                          </div>
-                          <div class="mb-3 row">
-                            <label for="password2_id" class="form-label password2">Confirmar contraseña</label>
-                            <input type="password" class="form-control input-group-text" style="text-align: left;" id="password2_id" name="password2" placeholder="Confirma tu contraseña">
-                          </div>
+                            <p id="error_password_id" class="error">Debe tener entre 8 y 20 caracteres</p>
+                            <p id="error_password_id2" class="error">Debe incluir al menos un número</p>
+                            <p id="error_password_id3" class="error">Debe incluir al menos una mayúscula</p>
+                            <p id="error_password_id4" class="error">Debe incluir al menos una minuscula</p>
+                            <p id="error_password_id5" class="error">Debe incluir al menos un caracter especial (!@#$%^&)</p>
+                        </div>
+                          
                           
                         <div class="mb-3 row">
                             <select class="form-select sexo" aria-label="Default select example" id="sexo_id">
@@ -67,18 +73,23 @@
                                 <option value="2">Masculino</option>
                                 <option value="3">Otro</option>
                             </select>
+                            <p id="error_gender_id" class="error">Selecciona tu Sexo</p>
                         </div>
                         <div class="mb-3 row">
                             <label for="correo_id" class="form-label correo">Correo electrónico</label>
                             <input type="text" class="form-control input-group-text" style="text-align: left;" id="correo_id" name="correo" placeholder="Ingresa correo electrónico">
+                            <p id="error_correo_id" class="error">Ingresa un correo electrónico valido</p>
                         </div>
                         <div class="mb-3 row">
                             <label for="telefono_id" class="form-label telefono">Teléfono</label>
                             <input type="text" class="form-control input-group-text" style="text-align: left;" id="telefono_id" name="telefono" placeholder="Ingresa tu teléfono">
+                            <p id="error_telefono_id" class="error"> Por favor introduce un teléfono válido (33-xxxx-xxxx) </p>
                         </div>
                         <div class="mb-3 row">
                             <label for="fecha_id" class="form-label fecha">Fecha de Nacimiento</label>
                             <input type="date" class="form-control input-group-text" style="text-align: left;" id="fecha_id" name="fecha" placeholder="Ingresa tu fecha de nacimiento">
+                            <p id="error_fecha_id" class="error">Ingresa una fecha valida</p>
+                            <p id="error_fecha_id2" class="error">Debes ser mayor de edad</p>
                         </div>
                         <div class="alert alert-primary" role="alert" id = "alertCorrecto" style="display: none;"></div>
                         <div class="row">
@@ -172,7 +183,7 @@
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
             © 2022 Copyright:
-            <a class="text-reset fw-bold" href="/home.html">TagTalent.com</a>
+            <a class="text-reset fw-bold" href="/index.html">TagTalent.com</a>
         </div>
         <!-- Copyright -->
     </footer>

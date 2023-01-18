@@ -1,12 +1,18 @@
+arrayUsuarios = [];
 const btnEnviar = document.getElementById('btnEnviar');
 document.getElementById('form').addEventListener('submit', function (event) {
     event.preventDefault();
 
     let validos = 0;
     let idTimeout;
+    let regexName =  /^[a-zA-Z]+$/ ;
     let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    let regexTel = /^([1-9]{2})\d{8}$/;
 
-    const campos = ['nombre_id', 'apellido_id', 'password_id', 'password2_id', 'sexo_id', 'correo_id', 'telefono_id', 'fecha_id'];
+
+
+
+    const campos = ['nombre_id', 'apellido_id', 'password_id', 'sexo_id', 'correo_id', 'telefono_id', 'fecha_id'];
     const camposObtenidos = {};
     campos.forEach(campo => camposObtenidos[campo] = document.getElementById(campo))
 
@@ -18,108 +24,183 @@ document.getElementById('form').addEventListener('submit', function (event) {
     alertError.style.display = "none" //Quitar mensaje de error
     alertError.innerHTML = "";
 
-    function mostrarError(mensaje, elemento) {
-        // Muestra un mensaje de error
-        alertError.style.display = "block";
-        alertError.innerHTML += mensaje;
-        // Aplica un estilo de error al elemento del formulario
-        elemento.style.border = "solid red 1px"
+    function mostrarError(mensaje, campo, idError) {
+        const errorElement = document.getElementById(idError);
+        if (errorElement) {
+            errorElement.style.display = "block";
+            errorElement.innerHTML = mensaje;
+            campo.style.border = "solid red 1px";
+        } else {
+            console.error(`No existe elemento con id: ${idError}`);
+        }
     }
 
-    function validarCampo(campo, mensaje, regex) {
+
+    function validarNombre(campo, idError) {
+      if (campo.value == "") {
+          mostrarError("Este campo es obligatorio", campo, idError);
+      } else if (campo.id === "nombre_id" && !campo.value.match(regexName)) {
+          mostrarError("El nombre solo debe contener letras", campo, idError);
+      } else if(campo.id === "nombre_id" && !campo.value.match(/.{3,20}/)){
+          mostrarError("El nombre debe contener entre 3 y 20 caracteres", campo, idError);
+      }else{
+          campo.style.border = "solid green 1px";
+          document.getElementById(idError).style.display = "none";
+          validos++;
+      }
+  }
+
+  function validarApellido(campo, idError) {
+    if (campo.value == "") {
+        mostrarError("Este campo es obligatorio", campo, idError);
+    } else if (campo.id === "apellido_id" && !campo.value.match(regexName)) {
+        mostrarError("El apellido solo debe contener letras", campo, idError);
+    } else if(campo.id === "apellido_id" && !campo.value.match(/.{3,20}/)){
+        mostrarError("El apellido debe contener entre 3 y 20 caracteres", campo, idError);
+    }else{
+        campo.style.border = "solid green 1px";
+        document.getElementById(idError).style.display = "none";
+        validos++;
+    }
+}
+
+    function validarPass(campo, idError) {
         if (campo.value == "") {
-            mostrarError("<br>" + mensaje + " es obligatorio.", campo);
-        } else if (!campo.value.match(regex)) {
-            mostrarError("<br>" + mensaje + " no es válido.", campo);
+            mostrarError("Este campo es obligatorio", campo, idError);
+        } else if (campo.id === "password_id" && !campo.value.match(/.{8,20}/)) {
+            mostrarError("La contraseña debe tener entre 8 y 20 caracteres", campo, idError);
+        } else if (campo.id === "password_id" && !campo.value.match(/[0-9]/)) {
+            mostrarError("La contraseña debe incluir al menos un número", campo, idError);
+        } else if (campo.id === "password_id" && !campo.value.match(/[A-Z]/)) {
+            mostrarError("La contraseña debe incluir al menos una mayúscula", campo, idError);
+        } else if (campo.id === "password_id" && !campo.value.match(/[a-z]/)) {
+            mostrarError("La contraseña debe incluir al menos una minúscula", campo, idError);
+        } else if (campo.id === "password_id" && !campo.value.match(/[!@#$%^&*]/)) {
+            mostrarError("La contraseña debe incluir al menos un caracter especial (!@#$%^&)", campo, idError);
         } else {
             campo.style.border = "solid green 1px";
+            document.getElementById(idError).style.display = "none";
             validos++;
         }
     }
 
-    function validarFecha(fecha) {
-        let fechaNacimiento = new Date(fecha.value);
-        // Calcula la edad del usuario a partir de su fecha de nacimiento
-        let hoy = new Date();
-        let edad = Math.floor((hoy - fechaNacimiento) / 31536000000);
-        // Si el usuario es menor de 18 años, muestra un mensaje de error
-        if (edad < 18) {
-            mostrarError("<br>Debes ser mayor de 18 años para registrarte.", fecha);
+    function validarCorreo(campo, idError) {
+        if (campo.value == "") {
+          mostrarError("Este campo es obligatorio", campo, idError);
+        } else if (campo.id === "correo_id" && !campo.value.match(emailRegex)) {
+            mostrarError("Ingresa un correo electrónico valido", campo, idError);
         } else {
-            // Si el usuario es mayor de edad, aumenta el contador de campos válidos
-            fecha.style.border = "solid green 1px";
-            validos++;
+          campo.style.border = "solid green 1px";
+          document.getElementById(idError).style.display = "none";
+          validos++;
         }
-    }
-
-
-
-
-    validarCampo(camposObtenidos.nombre_id, "El Nombre", /.{3,}/);
-    validarCampo(camposObtenidos.apellido_id, "El Apellido", /.{3,}/);
-    validarCampo(camposObtenidos.password_id, "La contraseña", /.{1,}/);
-    validarCampo(camposObtenidos.correo_id, "El correo electrónico", emailRegex);
-    validarCampo(camposObtenidos.telefono_id, "El teléfono", /[0-9]{10}/);
-
-    if (camposObtenidos.sexo_id.value == "Sexo") {
-        mostrarError("<br>Selecciona tu género.", camposObtenidos.sexo_id);
-    } else {
-        camposObtenidos.sexo_id.style.border = "solid green 1px";
-        validos++;
-    }
-
-    if (camposObtenidos.fecha_id.value == "") {
-        mostrarError("<br>La fecha es obligatoria.", camposObtenidos.fecha_id);
-    } else {
-        validarFecha(camposObtenidos.fecha_id);
-        
-    }
-
-    if (camposObtenidos.password_id.value !== camposObtenidos.password2_id.value) {
-        mostrarError("<br>Las contraseñas no coinciden.", camposObtenidos.password_id);
-      } else{
-        validos++;
       }
+
+      function validarFecha(campo, idError) {
+        if (campo.value == "") {
+            mostrarError("Este campo es obligatorio", campo, idError);
+          campo.style.border = "solid red 1px";
+        } else if(isNaN(Date.parse(campo.value))) {
+          document.getElementById(idError).style.display = "block";
+          campo.style.border = "solid red 1px";
+        }else {
+          let fechaNacimiento = new Date(campo.value);
+          let hoy = new Date();
+          let edad = Math.floor((hoy - fechaNacimiento) / 31536000000);
+          if (edad < 18) {
+            mostrarError("Debe ser mayor de edad", campo, idError);
+            campo.style.border = "solid red 1px";
+          } else {
+            document.getElementById(idError).style.display = "none";
+            campo.style.border = "solid green 1px";
+            validos++;
+          }
+        }
+      }
+
+
+      function validarGender(campo, idError) {
+        if (campo.value == "Sexo") {
+          mostrarError("Este campo es obligatorio", campo, idError);
+        } else {
+          campo.style.border = "solid green 1px";
+          document.getElementById(idError).style.display = "none";
+          validos++;
+        }
+      }
+      
+    
+    
+
+    function validarTelefono(campo, idError) {
+        if (campo.value == "") {
+          mostrarError("Este campo es obligatorio", campo, idError);
+        } else if (campo.id === "telefono_id" && !campo.value.match(regexTel)) {
+            mostrarError("Por favor introduce un teléfono válido ((1-9)x-xxxx-xxxx)", campo, idError);
+        } else {
+          campo.style.border = "solid green 1px";
+          document.getElementById(idError).style.display = "none";
+          validos++;
+        }
+      }
+
+
+
+
+    validarNombre(camposObtenidos.nombre_id, "error_nombre_id");
+    validarApellido(camposObtenidos.apellido_id, "error_apellido_id");
+    validarPass(camposObtenidos.password_id, "error_password_id");
+    validarCorreo(camposObtenidos.correo_id,"error_correo_id");
+    validarTelefono(camposObtenidos.telefono_id, "error_telefono_id");
+    validarFecha(camposObtenidos.fecha_id,"error_fecha_id");
+    validarGender(camposObtenidos.sexo_id, "error_gender_id");
+    
+
+    
+
+    
+
+    console.log(validos);
 
     if ((idTimeout != undefined) && (idTimeout != null)) {
         clearTimeout(idTimeout);
     }//idTimeout
 
-    
+
 
     let numCampos = campos.length;
     if (validos == numCampos) {
-      setTimeout(function () {
-        camposObtenidos.nombre_id.style.border = "";
-        camposObtenidos.apellido_id.style.border = "";
-        camposObtenidos.password_id.style.border = "";
-        camposObtenidos.password2_id.style.border = "";
-        camposObtenidos.sexo_id.style.border = "";
-        camposObtenidos.correo_id.style.border = "";
-        camposObtenidos.telefono_id.style.border = "";
-        camposObtenidos.fecha_id.style.border = "";
-        alertCorrecto.innerHTML = "¡Tu registro se ha completado correctamente!";
-        alertCorrecto.style.display = "block";
+        setTimeout(function () {
+            camposObtenidos.nombre_id.style.border = "";
+            camposObtenidos.apellido_id.style.border = "";
+            camposObtenidos.password_id.style.border = "";
+            camposObtenidos.sexo_id.style.border = "";
+            camposObtenidos.correo_id.style.border = "";
+            camposObtenidos.telefono_id.style.border = "";
+            camposObtenidos.fecha_id.style.border = "";
+            alertCorrecto.innerHTML = "¡Tu registro se ha completado correctamente!";
+            alertCorrecto.style.display = "block";
 
-        setTimeout(function(){
-          alertCorrecto.style.display = "none";
-      }, 2000);
-      formulario.reset();
-    }, 2000);
-  }
-
-    if (validos === numCampos) {
-      let usuario = {
-        nombre: camposObtenidos.nombre_id.value,
-        apellido: camposObtenidos.apellido_id.value,
-        password: camposObtenidos.password_id.value,
-        genero: camposObtenidos.sexo_id.value,
-        correo: camposObtenidos.correo_id.value,
-        telefono: camposObtenidos.telefono_id.value,
-        fechaNacimiento: camposObtenidos.fecha_id.value
-      };
-      console.log(usuario);
-      let usuarioJSON = JSON.stringify(usuario);
+            setTimeout(function () {
+                alertCorrecto.style.display = "none";
+            }, 2000);
+            formulario.reset();
+        }, 2000);
     }
 
-  });
+    if (validos === numCampos) {
+        let usuario = {
+            nombre: camposObtenidos.nombre_id.value,
+            apellido: camposObtenidos.apellido_id.value,
+            password: camposObtenidos.password_id.value,
+            genero: camposObtenidos.sexo_id.value,
+            correo: camposObtenidos.correo_id.value,
+            telefono: camposObtenidos.telefono_id.value,
+            fechaNacimiento: camposObtenidos.fecha_id.value
+        };
+        arrayUsuarios.push(usuario)
+        console.log(usuario);
+        localStorage.setItem("Usuarios", JSON.stringify(arrayUsuarios));
+    }
+
+});
