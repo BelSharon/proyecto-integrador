@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 document.getElementById('formTest')
     .addEventListener('submit', function (event) {
         event.preventDefault();
@@ -58,4 +56,3 @@ document.getElementById('formTest')
         }
         
     }*/
->>>>>>> 37099b251d92e43fc499e34a1cf498e4c34e93c8
