@@ -5,7 +5,6 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
     let validos = 0;
     let idTimeout;
-    let regexName =  /^[a-zA-Z]+$/ ;
     let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     let regexTel = /^([1-9]{2})\d{8}$/;
 
@@ -36,33 +35,17 @@ document.getElementById('form').addEventListener('submit', function (event) {
     }
 
 
-    function validarNombre(campo, idError) {
-      if (campo.value == "") {
-          mostrarError("Este campo es obligatorio", campo, idError);
-      } else if (campo.id === "nombre_id" && !campo.value.match(regexName)) {
-          mostrarError("El nombre solo debe contener letras", campo, idError);
-      } else if(campo.id === "nombre_id" && !campo.value.match(/.{3,20}/)){
-          mostrarError("El nombre debe contener entre 3 y 20 caracteres", campo, idError);
-      }else{
-          campo.style.border = "solid green 1px";
-          document.getElementById(idError).style.display = "none";
-          validos++;
-      }
-  }
-
-  function validarApellido(campo, idError) {
-    if (campo.value == "") {
-        mostrarError("Este campo es obligatorio", campo, idError);
-    } else if (campo.id === "apellido_id" && !campo.value.match(regexName)) {
-        mostrarError("El apellido solo debe contener letras", campo, idError);
-    } else if(campo.id === "apellido_id" && !campo.value.match(/.{3,20}/)){
-        mostrarError("El apellido debe contener entre 3 y 20 caracteres", campo, idError);
-    }else{
-        campo.style.border = "solid green 1px";
-        document.getElementById(idError).style.display = "none";
-        validos++;
+    function validarCampo(campo, idError) {
+        if (campo.value == "") {
+            mostrarError("Este campo es obligatorio", campo, idError);
+        } else if (campo.id === "nombre_id" && !campo.value.match(/.{3,}/)) {
+            mostrarError("El nombre debe tener al menos 3 caracteres", campo, idError);
+        } else {
+            campo.style.border = "solid green 1px";
+            document.getElementById(idError).style.display = "none";
+            validos++;
+        }
     }
-}
 
     function validarPass(campo, idError) {
         if (campo.value == "") {
@@ -147,8 +130,8 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
 
 
-    validarNombre(camposObtenidos.nombre_id, "error_nombre_id");
-    validarApellido(camposObtenidos.apellido_id, "error_apellido_id");
+    validarCampo(camposObtenidos.nombre_id, "error_nombre_id");
+    validarCampo(camposObtenidos.apellido_id, "error_apellido_id");
     validarPass(camposObtenidos.password_id, "error_password_id");
     validarCorreo(camposObtenidos.correo_id,"error_correo_id");
     validarTelefono(camposObtenidos.telefono_id, "error_telefono_id");
