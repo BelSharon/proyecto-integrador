@@ -38,7 +38,7 @@ addItem({'name':'Mi primer publicación',
 
 addItem({'name':'Mi taller',
     'img':'https://media.istockphoto.com/id/1061179190/es/foto/taller-de-carpinter%C3%ADa-sin-gente.jpg?s=612x612&w=0&k=20&c=zeNf-MiWbNjl2L88KM2smW3jCN-eKijPhqWoY7unrN4=',
-    'description':'Hoy comence el día con un nuevo proyecto, donde el cliente me pidió hacer unos bancos para su cocina',
+    'description':'Hoy comencé el día con un nuevo proyecto, donde el cliente me pidió hacer unos bancos para su cocina',
     'date' : '23 de diciembre de 2022'});
     
 addItem({'name':'Seleccionando los insumos',

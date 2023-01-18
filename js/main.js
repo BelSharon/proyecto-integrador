@@ -24,7 +24,7 @@ console.log("[" + exampleFormControlInput1.value.replaceAll("  ","")+ "]" );
 
 
 if (exampleFormControlTextarea1.value.trim().length<20) {
-    alertError.innerHTML = "el mensaje debe tener 20 caracteres";
+    alertError.innerHTML = "El mensaje debe tener 20 caracteres";
     alertError.style.display="block";
     exampleFormControlTextarea1.focus();
     exampleFormControlTextarea1.selected();
@@ -48,7 +48,7 @@ if (exampleFormControlInput1.value.length<8) {
 
 if (exampleFormControlInput2.value.match(emailRegex)==null) {
     alertError.style.display="block";
-    alertError.innerHTML += "<br>El correo electónivo no es válido.";
+    alertError.innerHTML += "<br>El correo electrónico no es válido.";
     exampleFormControlInput2.style.border="solid red 1px"
 }else{
     exampleFormControlInput2.style.border="solid green 1px"

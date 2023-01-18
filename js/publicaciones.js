@@ -94,7 +94,7 @@ document.getElementById('form')
             setTimeout(function () {
                 titulo.style.border = "";
                 publicacion.style.border = "";
-                alertCorrecto.innerHTML = "¡Tu publicación ha sido publicada!";
+                alertCorrecto.innerHTML = "¡Tu publicación se ha realizado!";
                 alertCorrecto.style.display = "block";
                 formulario.reset();
                 formulario2.reset();
