@@ -7,7 +7,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     let idTimeout;
     let regexName =  /^[a-zA-Z]+$/ ;
     let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    let regexTel = /^([1-9]{2})\d{8}$/;
+    let regexTel = /^([1-9])\d{9}$/;
 
 
 
@@ -136,7 +136,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
         if (campo.value == "") {
           mostrarError("Este campo es obligatorio", campo, idError);
         } else if (campo.id === "telefono_id" && !campo.value.match(regexTel)) {
-            mostrarError("Por favor introduce un teléfono válido ((1-9)x-xxxx-xxxx)", campo, idError);
+            mostrarError("Por favor introduce un teléfono válido (1x-xxxx-xxxx)", campo, idError);
         } else {
           campo.style.border = "solid green 1px";
           document.getElementById(idError).style.display = "none";
