@@ -7,6 +7,7 @@
     <title>Perfil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/userProfile.css">
 </head>
 <body>
     <header>
@@ -33,10 +34,12 @@
             </div>
         </nav>
         </header> 
-    <div class="mainContainer" >
-        <div class="text-center">
+    <div class="wapperUser" >
+        <div class="photoUser text-center">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLXM3HqDEZ71mtnsAE36rKPcuQlkt6Q9EaDg&usqp=CAU" class="rounded" alt="Juanito" width="200px" height="200px">
-            <h2>Nombre usuario</h2>
+            <h2><b>Nombre usuario</b></h2>
+        </div>
+        <div class="descriptionUser text-align: left;">
             <h4>Categoría</h4>
             <h6>Delegación, Ciudad</h6>
             <p>Soy un carpintero de 25 años, realizo trabajos desde los más sencillos hasta trabajos con acabados más complejos que se puedan utilizar como decoración en el hogar.</p>
@@ -44,13 +47,6 @@
             <p>nombre@correo.com <br>
             55 5050 5050</p>
         </div>
-    </div>
-    <div class="text-center">
-      <!--  <div class="btn-group">
-            <a href="./userProfilePosts.html" class="btn btn-primary" aria-current="page">Trabajos</a>
-            <a href="./userProfileCommets.html" class="btn btn-primary">Comentarios</a>
-        </div>
-        -->
     </div>
     
 <!--Nueva publicación-->
@@ -61,13 +57,12 @@
           Nueva Publicación
         </button>
       </h2>
-      <div class="container" id="genCont"> 
+      <div class="container" id="wapperNewPost"> 
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body"> 
-            <div class="container" id="newPost">
                 <div class="container" id="containerImgPost"><!--Imagen-->
                         <br/><br/>
-                        <div>
+                        <div class="container">
                           <form id="form2">
                               <div class="form-group">
                                 <label for="fileImage">Selecciona una imagen:</label>
@@ -78,24 +73,21 @@
                             </form>
                         </div>
                         <div>
-                            <img id="imageFile" name="imageFile" src=""  />
+                            <img id="imageFile" name="imageFile" src=""  /> 
                         </div>
                         <div>
                           <textarea rows="20" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></textarea>
                         </div>
                 </div>
 
-                <div class="container" id="containerTituloPost">  <!--titulo-->
+                <div class="container" id="formNewPost">  <!--titulo-->
                 <form id="form" class="contact_form">
                 <div class="alert alert-danger" role="alert" id="alertError" style="display: none;"></div>
                 <div>
                     <label for="titulo_id" class="form-label titulo">Título</label>
                     <input type="text" class="form-control input-group-text" style="text-align: left;" id="titulo_id" name="titulo" placeholder="Ingresa el titulo">
                 </div>
-                </div>
                 
-                <div class="container"
-                id="containerDescriptionPost"> <!--descripción-->
                     <label for="publicacion_id" class="form-label mensaje">Publicación</label>
                     <textarea class="form-control input-group-text" style="text-align: left;" id="publicacion_id" rows="3" name="publicacion" placeholder="Ingresa una descripcion"></textarea>
             
@@ -104,7 +96,6 @@
                 <div>
                     <button type="submit" class="btn btn-primary" id="btnEnviarPost">Publicar</button>
                 </div>
-            </div>
                 </form>
         </div>
      </div>
@@ -112,13 +103,14 @@
 </div>
 </div>
 </div>
+<hr>
 <br>
-
-    <div class="container" id="contImagenes"> 
-        
-        <h2 class="text-center">Mis trabajos</h2>      
-
-
+    <!--Publicaciones-->
+    <div class="text-center"> 
+        <h2>Mis trabajos</h2><br>
+    </div>
+    <div class="container" id="contTrabajos">
+        <div class="container" id="contCarousel">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner" id="list-items">
             </div>
@@ -131,30 +123,12 @@
               <span class="visually-hidden">Siguiente</span>
             </button>
           </div>  
+        </div>
     </div>
         <!-- Footer -->
+    <br><hr>
     <footer class="text-center text-lg-start bg-white text-muted">
         <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block">
-                <span>Conecta con este proyecto en GitHub:</span>
-            </div>
-            <!-- Left -->
-
-            <!-- Right -->
-            <div class="ms-5 d-inline-flex">
-                <!-- <a href="" class="me-4 link-secondary">
-          <img src="https://www.iconpacks.net/icons/1/free-linkedin-icon-112-thumb.png" height="35px" alt="Linkedin-icon">
-        </a> -->
-                <a href="https://github.com/BelSharon/proyecto-integrador.git" class="me-5 link-secondary">
-                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" height="35px" alt="Github-icon">
-                </a>
-            </div>
-            <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-
         <!-- Section: Links  -->
         <section class="">
             <div class="container text-center text-md-start mt-5">
@@ -220,7 +194,6 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
-    <script src="./js/publicaciones.js"></script>
     <script src="./js/userProfilePosts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
