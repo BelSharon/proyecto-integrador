@@ -65,7 +65,7 @@ document.getElementById('form')
             validos++;
         }        
 
-        let numRegex = /^([1-9]{2})\d{8}$/;
+        let numRegex = /^([1-9])\d{9}$/;
         if (telefono.value.match(numRegex) == null) {
             
             mostrarError("El teléfono no es válido.", telefono, "error_telefono_id");

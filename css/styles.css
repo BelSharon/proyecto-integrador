@@ -353,6 +353,7 @@ color: rgb(3,159,187);
   button#btnEnviar {
     display: block;
     margin: auto;
+    width: auto;
     margin-bottom: 10px;
   }
 
