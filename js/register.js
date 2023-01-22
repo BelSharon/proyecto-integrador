@@ -12,7 +12,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
 
 
-    const campos = ['nombre_id', 'apellido_id', 'password_id', 'sexo_id', 'correo_id', 'telefono_id', 'fecha_id'];
+    const campos = ['nombre_id', 'apellido_id', 'password_id', 'password_id2', 'sexo_id', 'correo_id', 'telefono_id', 'fecha_id'];
     const camposObtenidos = {};
     campos.forEach(campo => camposObtenidos[campo] = document.getElementById(campo))
 
@@ -84,6 +84,19 @@ document.getElementById('form').addEventListener('submit', function (event) {
         }
     }
 
+    function validarPasswordCoincide(password, password_confirm, idError) {
+      if (password.value == "" || password_confirm.value == "") {
+          mostrarError("Ambos campos de contraseña son obligatorios", password_confirm, idError);
+      } else if(password.value !== password_confirm.value){
+          mostrarError("Las contraseñas no coinciden", password_confirm, idError);
+      }else{
+          document.getElementById(idError).style.display = "none";
+          password_confirm.style.border = "solid green 1px";
+          validos++;
+      }
+  }
+  
+
     function validarCorreo(campo, idError) {
         if (campo.value == "") {
           mostrarError("Este campo es obligatorio", campo, idError);
@@ -154,6 +167,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     validarTelefono(camposObtenidos.telefono_id, "error_telefono_id");
     validarFecha(camposObtenidos.fecha_id,"error_fecha_id");
     validarGender(camposObtenidos.sexo_id, "error_gender_id");
+    validarPasswordCoincide(camposObtenidos.password_id, camposObtenidos.password_id2, "error_confirmPassword_id");
     
 
     
@@ -174,6 +188,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
             camposObtenidos.nombre_id.style.border = "";
             camposObtenidos.apellido_id.style.border = "";
             camposObtenidos.password_id.style.border = "";
+            camposObtenidos.password_id2.style.border = "";
             camposObtenidos.sexo_id.style.border = "";
             camposObtenidos.correo_id.style.border = "";
             camposObtenidos.telefono_id.style.border = "";
