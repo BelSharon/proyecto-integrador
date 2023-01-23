@@ -1,186 +1,371 @@
 #carouselExampleCaptions {
-    /* Estilos para el fondo */
-    background-image: linear-gradient(to right, #f5f5f5, #ddd);
-    border-radius: 5px;
-  
-    /* Estilos para los títulos y leyendas */
-    color: #333;
-    font-size: 1.2em;
-    font-weight: 600;
-  
-    background-color: #333;
-  
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-  }
+  /* Estilos para el fondo */
+  background-image: linear-gradient(to right, #f5f5f5, #ddd);
+  border-radius: 5px;
+
+  /* Estilos para los títulos y leyendas */
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 600;
+
+  background-color: #333;
+
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+}
 
 #contCarousel{
-    justify-content: center;
+  justify-content: center;
 }
-  
-  /* Estilos para los botones de navegación */
-  #carouselPrev,
-  #carouselNext {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    font-size: 1.5em;
-    color: #fff;
-  }
-  
-  
-  /* Estilos para el color */
-  .mainContainer {
-    color: #070707;
-    font-size: 1.2em;
-    padding: 20px;
-    line-height: 1.5;
-  
-    background-image: url('./assets/img/fondoperfil.jpg');
-    background-size: cover;
-    background-position: center;
-  
-    background-color: #333;
-  
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0;
-  }
-  
-  /* Estilos para las transiciones */
-  .mainContainer h2,
-  .mainContainer img {
-    transition: all 0.5s ease-in-out;
-  }
-  
-  /* Estilos para info usuario */
+
+/* Estilos para los botones de navegación */
+#carouselPrev,
+#carouselNext {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+
+/* Estilos para el color */
+.mainContainer {
+  color: #070707;
+  font-size: 1.2em;
+  padding: 20px;
+  line-height: 1.5;
+
+  background-image: url('./assets/img/fondoperfil.jpg');
+  background-size: cover;
+  background-position: center;
+
+  background-color: #333;
+
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Estilos para las transiciones */
+.mainContainer h2,
+.mainContainer img {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Estilos para info usuario */
 @media screen and (min-width: 751px){
-  
-  .wapperUser{
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 2fr;
-    background-color: #E6F4F1;
-    margin-top: 15px;
-  }
-  
-  .photoUser img{
-    border: 10px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  .photoUser h2{
-    padding: 15px;
-    color: #0049B4;
-  }
-  
-  .photoUser{
-    padding: 30px;
-    align-self: center;
-  }
-  
-  .descriptionUser{
-    margin: 15px;
-    padding: 50px;
-  }
-  
-  /* Estilos para nueva publicación*/
+
+.wapperUser{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+  background-color: #E6F4F1;
+  margin-top: 15px;
+}
+
+.photoUser img{
+  border: 10px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.photoUser h2{
+  padding: 15px;
+  color: #0049B4;
+}
+
+.photoUser{
+  padding: 30px;
+  align-self: center;
+}
+
+.descriptionUser{
+  margin: 15px;
+  padding: 50px;
+}
+
+/* Estilos para nueva publicación*/
 .accordion{
-    margin: 30px;
-    width: 33%;
-  }
-  
+  margin: 30px;
+  width: 33%;
+}
+
 .accordion > #wapperNewPost{
-    justify-content: center;
+  justify-content: center;
 }}
 
 #btnFake{
-    box-sizing: border-box;
-    margin: 5px;
-    padding: 5px 0px;
-  }
-  
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 5px 0px;
+}
+
 #btnEnviarPost{
-    box-sizing: content-box;
-    margin: 5px;
-  }
+  box-sizing: content-box;
+  margin: 5px;
+}
 
 @media screen and (max-width: 750px) {
-     /* Estilos para info usuario */
-  .wapperUser{
-    background-color: #E6F4F1;
-    margin-top: 15px;
-    padding: auto;
-    display: grid;
-    grid-auto-rows: 1fr 1fr;
-  }
-  
-  .photoUser{
-    grid-row-start: 1;
-    grid-row-end: 2;
-    justify-content: center;
-  }
+   /* Estilos para info usuario */
+.wapperUser{
+  background-color: #E6F4F1;
+  margin-top: 15px;
+  padding: auto;
+  display: grid;
+  grid-auto-rows: 1fr 1fr;
+}
 
-  .descriptionUser{
-    grid-row-start: 2;
-    grid-row-end: 3;
-    justify-content: center;
-  }
-  .photoUser img{
-    border: 10px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  .photoUser h2{
-    padding: 15px;
-    color: #0049B4;
-  }
-  
-  .photoUser{
-    padding: 30px;
-    align-self: center;
-  }
-  
-  .descriptionUser{
-    margin: 15px;
-    padding: 50px;
-  }
-  .accordion{
-    margin: 15px;
-    width: 50%;
-  }
-  
-  .accordion > #wapperNewPost{
-    justify-content: center;
-  }
+.photoUser{
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-content: center;
+}
 
-  #imageFile{
-    max-width: 20%;
-  }
+.descriptionUser{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-content: center;
+}
+.photoUser img{
+  border: 10px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.photoUser h2{
+  padding: 15px;
+  color: #0049B4;
+}
+
+.photoUser{
+  padding: 30px;
+  align-self: center;
+}
+
+.descriptionUser{
+  margin: 15px;
+  padding: 50px;
+}
+.accordion{
+  margin: 15px;
+  width: 50%;
+}
+
+.accordion > #wapperNewPost{
+  justify-content: center;
+}
+
+#imageFile{
+  max-width: 20%;
+}
 }
 
 #btnFake{
-    box-sizing: border-box;
-    margin: 5px;
-    padding: 5px 0px;
-  }
-  
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 5px 0px;
+}
+
 #btnEnviarPost{
-    box-sizing: content-box;
-    margin: 5px;
-  }
+  box-sizing: content-box;
+  margin: 5px;
+}
 
 
 /*Trabajos*/ 
 #contTrabajos{
-  justify-content: center;
+justify-content: center;
 }
 
 #contCarousel{
-  margin: 30px;
-  max-width: 66%;
-  }
+margin: 30px;
+max-width: 66%;
+}
+
+/*Estilo para Publicaciones*/ 
+
+.container_pub {
+display: flex;
+justify-content: center;
+}
+
+.list-post{
+  max-width: 500px;
+    height: 20vh;
+    margin-top: 50px;
+    width: 95%;
+   
+}
+
+form{
+  width: 100%;
+  height: 100px;
+  background: white;
+  background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+} 
+
+
+figure{
+  min-width: 45px;
+  min-height: 45px;
+  max-width: 45px;
+  max-height: 45px;
+  border: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+figure img{
+  width: 100%;
+
+}
+
+.container-post-create{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.container-input{
+  width: 100%;
+}
+
+.container-input input{
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #1d2129;
+}
+.container-input input:focus{
+  outline: none;
+  border: none;
+}
+
+.container-header-create{
+  width: 100%;
+    height: 30px;
+    background: #e3f2ff;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    color: #3e2a2a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    justify-content: space-between;
+}
+.container-header-create span{
+  margin:0 10px;
+} 
+
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 200vh;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  display: none;
+}
+
+.container-input-file{
+  width: 120px;
+  height: 30px;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid rgba(0,0,0,0.05);
+
+}
+
+.fileimg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+
+.input-txt{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #8acceb;
+  padding: 0 10px;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+}
+.img-photo{
+  width: 22px;
+  height: 22px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3px
+}
+.txt-photo img{
+  width: 100%;
+
+}
+
+.btn-submit{
+  background: #0049B4;
+    padding: 3px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    width: 100%;
+    height: 26px;
+    cursor: pointer;
+}
+
+.container-img-preview{
+  max-width: 90px;
+    max-height: 90px;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.container-img-preview img{
+  max-width: 90px;
+    width: 90px;
+    max-height: 90px;
+    height: auto;
+}
+
+/*Estilos usados para aparecer los campos*/
+
+.entraroverlay{
+  display: block;
+}
+
+.entrarform{
+  max-height: 500px;
+    position: relative;
+    z-index: 3;
+    height: auto;
+}
+
