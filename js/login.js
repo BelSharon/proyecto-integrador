@@ -15,6 +15,7 @@ document.getElementById('formTest')
 
         if (arrayDatos.some((s)=> {return s.correo==emailView && s.password== contrasenaView})) {
             console.log("Debo direccionar al perfil de usuario");
+          
         } else {
             alertError.style.display="block";
             alertError.innerHTML += "El correo o contraseña son inválidos";
