@@ -1,5 +1,6 @@
-# proyecto-integrador
+# TagTalent
 <em> Bienvenido a TagTalent.</em>
+<a href="https://github.com/BelSharon/proyecto-integrador"><img src="https://i.postimg.cc/3RWtdzGq/logo2.png" alt="TagTalent"></a>
 ## Que es TagTalent?
 TagTalent es una red social dedicada a conectar a profesionales con oportunidades de trabajo y a empleadores con candidatos calificados. Con nuestra plataforma, puedes crear un perfil detallado que destaque tus habilidades y experiencia laboral, buscar ofertas de trabajo en función de tus intereses y habilidades, y aplicar a empleos con solo unos pocos clics. Además, si eres empleador, puedes publicar ofertas de trabajo, buscar candidatos y comunicarte con ellos directamente a través de la plataforma.
 
