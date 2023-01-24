@@ -73,7 +73,7 @@ background-size: cover;
 background-attachment: fixed;
 position: relative;
 overflow: hidden;
-border-radius: 0 0 85% 85% / 25%;
+border-radius: 100 0 85% 85% / 25%;
 }
 
 header .overlay{
@@ -433,4 +433,10 @@ Estilos para página inicio de sesión
   padding-bottom: 0;
   margin: 0;
   text-align: left;
+}
+
+
+#idRegistro{
+  text-align:center;
+  color:var(--color-two);
 }
