@@ -17,8 +17,10 @@ document.getElementById('formTest')
             console.log("Debo direccionar al perfil de usuario");
            
         } else {
-            alertError.style.display="block";
-            alertError.innerHTML += "El correo o contraseña son inválidos";
+
+            swal("Error", "El correo o contraseña son inválidos", "error");
+            //alertError.style.display="block";
+           // alertError.innerHTML += "El correo o contraseña son inválidos";
             //correo.style.border="solid red 1px";
         }
         /*if (emailView.value.match(emailRegex)==null) {

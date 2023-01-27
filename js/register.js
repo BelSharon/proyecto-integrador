@@ -193,14 +193,15 @@ document.getElementById('form').addEventListener('submit', function (event) {
             camposObtenidos.correo_id.style.border = "";
             camposObtenidos.telefono_id.style.border = "";
             camposObtenidos.fecha_id.style.border = "";
-            alertCorrecto.innerHTML = "¡Tu registro se ha completado correctamente!";
-            alertCorrecto.style.display = "block";
+           // alertCorrecto.innerHTML = "¡Tu registro se ha completado correctamente!";
+           // alertCorrecto.style.display = "block";
+           swal("¡Felicidades!", "¡Tu registro se ha completado correctamente!", "success");
 
             setTimeout(function () {
                 alertCorrecto.style.display = "none";
             }, 2000);
             formulario.reset();
-        }, 2000);
+        }, 1000);
     }
 
     if (validos === numCampos) {
