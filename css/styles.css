@@ -20,249 +20,452 @@
 |      Reset       |
 -------------------*/
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
-
-}
-
-/* ----------------
-|   Main Styling   |
--------------------*/
-
-body {
-
-overflow-x: hidden;
-justify-content: center;
-align-items: center;
-min-height: 100hv;
-}
-
-
-/* ----------------
-|      Nav         |
--------------------*/
-
-nav {
-background-color: white;
-position: fixed;
-}
-
-nav ul {
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-nav ul li{
-margin: 0px 40px;
-}
-
-/* ----------------
-|      Header      |
--------------------*/
-
-header {
-background: url('../assets/background.jpg');
-text-align: center;
-width: 100%;
-height: auto;
-background-size: cover;
-background-attachment: fixed;
-position: relative;
-overflow: hidden;
-border-radius: 100 0 85% 85% / 25%;
-}
-
-header .overlay{
-width: 100%;
-height: 100%;
-padding: 50px;
-color: #FFF;
-text-shadow: 1px 1px 1px #333;
-background-image: linear-gradient( 135deg, #0048b465 10%, #6494ed63 100%);
-
-}
-
-h1 {
-margin-bottom: 30px;
-}
-
-h2, p {
-margin-bottom: 30px;
-}
-
-.btn-about {
-border-radius: 10px;
-border-color: var(--color-one);
-outline: none;
-padding: 10px 20px;
-color: var(--color-one);
-background: #fff;
-margin-bottom: 50px;
-box-shadow: 0 3px 20px 0 #0000003b;
-}
-.btn-about :hover{
-cursor: pointer;
-color: white;
-background-color: #0049B4;
-}
-
-/* ----------------
-|  Contact us page |
--------------------*/
-
-
-
-.btn-form {
-  align-items: flex-end;
-}
-
-
-
-
-#rowContainer{
-  opacity: 1;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   
-}
-
-
-
-@media (max-width: 991px) {
-  #rowContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  }
+  
+  /* ----------------
+  |   Main Styling   |
+  -------------------*/
+  
+  body {
+  
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+  min-height: 100hv;
+  }
+  
+  
+  /* ----------------
+  |      Nav         |
+  -------------------*/
+  
+  nav {
+  background-color: rgb(251, 251, 251);
+  position: fixed;
+  }
+  
+  nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  nav ul li{
+  margin: 0px 40px;
+  }
+  
+  /* ----------------
+  |      Header      |
+  -------------------*/
+  
+  header {
+  background: url('../assets/background.jpg');
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100 0 85% 85% / 25%;
+  }
+  
+  header .overlay{
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 135deg, #0048b465 10%, #6494ed63 100%);
+  
+  }
+  
+  h1 {
+  margin-bottom: 30px;
+  }
+  
+  h2, p {
+  margin-bottom: 30px;
+  }
+  
+  .btn-about {
+  border-radius: 10px;
+  border-color: var(--color-one);
+  outline: none;
+  padding: 10px 20px;
+  color: var(--color-one);
+  background: #fff;
+  margin-bottom: 50px;
+  box-shadow: 0 3px 20px 0 #0000003b;
+  }
+  .btn-about :hover{
+  cursor: pointer;
+  color: white;
+  background-color: #0049B4;
+  }
+  
+  
+  /* ----------------
+  |   About us page   |
+  -------------------*/
+  
+  
+  .title-team {
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  
+  }
+  
+  /* Valores, Misión y Visión */
+  .mision {
+  text-align: center;
+  
+  }
+  
+  .card{
+    margin: 20px;
+  }
+  
+  /* Tarjetas de participantes */
+  
+  
+  /* ----------------
+  |      Cards         |
+  -------------------*/
+  
+  .container{
+  
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+  
+  }
+  
+  
+  .container .card1{
+  position: relative;
+  height: 270px;
+  background: #fff;
+  display: flex;
+  width: 39%;
+  margin: 45px 0;
+  }
+  
+  .container .card1 .imgBx{
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e3f2ff;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  }
+  
+  .container .card1:hover .imgBx{
+  
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: calc(50% - 75px);
+  transition: 0.5s ease-in-out;
+  background: #fff;
+  }
+  
+  .container .card1 .imgBx:before{
+  
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.038);
+  font-weight: 700;
+  }
+  
+  .container .card1 .imgBx img{
+  border-radius: 10%;
+  max-width: 200px;
+  transition: 0.5s ease-in-out;
+  
+  }
+  
+  .container .card1:hover .imgBx img{
+  max-width: 125px;
+  
+  }
+  
+  .container .card1 .content{
+  position:absolute;
+  right: 0;
+  width: calc(100% - 75px);
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  }
+  
+  .container .card1 .content h3{
+  color: rgb(15, 15, 125);
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 24px;
+  
+  }
+  
+  
+  @media (max-width: 1080px){
+    .container{
+  
+      position: relative;
+      width: 1000px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    
+      }
+      .container .card1{
+        position: relative;
+        height: 300px;
+        background: #fff;
+        display: flex;
+        width: 39%;
+        margin: 45px 50px;
+        }
+        
+      }
+  
+  
+  
+  @media (max-width: 992px){
+  .container{
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+  }
+  .container .card1{
+      width: 300px;
+  }
+  }
+  
+  
+  @media (max-width: 991px){
+  .container .card1{
+     max-width: 250px;
+     flex-direction: column;
+     height: auto;
+  }
+  
+  .container .card1 .imgBx{
+     position: relative;
+  }
+  
+  .container .card1 .imgBx, 
+  .container .card1:hover .imgBx{
+      width: 100%;
+      height: 250px;
+      left: 0;
+   }
+  
+  .container .card1 .imgBx img, 
+  .container .card1:hover .imgBx img{
+      max-width: 150px;
+  }
+  
+  .container .card1 .content{
+      position: relative;
+      width: 100%;
+  }
+  }
+  
+  i{
+  
+  width: 50px;
+   color: rgb(0, 0, 2);
+  
+  }
+  
+  i:hover{
+  color: rgb(3,159,187);
+  }
+  
+  
+  
+  /* ----------------
+  |  Contact us page |
+  -------------------*/
+  
+  
+  
+  .btn-form {
+    align-items: flex-end;
     align-items: center;
   }
-
-  #imgTest {
-    order: -1;
-    width: 100%;
-    height: 350px;
-    object-fit: contain;
-    padding: 30px;
+  
+  
+  
+  
+  #rowContainer{
+    opacity: 1;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    margin-left: 45px;
+    align-items: center;
     
   }
-}
-
-@media screen and (max-width: 767px) {
-  .container .footer{
-      display: grid;
-    }
-  }
-
-  #idContactanos{
-    text-align:center;
-    color:var(--color-two);
-  }
-
-  #imgTest{
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    padding: 30px;
-  }
-
-
-  /*
-  Establezco el valor del boton en display y block, para que abarque todo el ancho disponible
-  y el margin en auto para centrarlo de forma horizontal al contonedor
-  */
-
-  button#btnEnviar {
-    display: block;
-    margin: auto;
-    width: auto;
-    margin-bottom: 10px;
-  }
-
-  /*
-  Añado un padding al valor por defecto en una PC en el formulario
-  */
-  #formTest{
-    padding-right: 30px;
-  }
-
-  /*
- Esto hará que la imagen se ajuste 
- al ancho y al alto del contenedor sin distorsión y mantenga su 
- proporción de aspecto original cuando la pantalla tenga un ancho de menos de 768px.
-
- El display flex en el rowContainer es una regla para el contenedor padre
- y con la propiedad flex-direction:colum indico que los elementos 
- se deben apilarse en columnas en lugar de filas y así hago el efecto de que la imagen
- se coloque encima del formulario en dispositivos pequeños
-
- En el #imgTest la propiedad order -1 se mostrara antes que el elemento que tenga order 1
- en este caso el formulario
- El max-width 100% permite que la imagen se ajuste al ancho del contenedor,
- y para que tenga su proporcion original uso el height:auto y para que no se distorcione
- uso el object-fit: contain
-  */
-
-  @media (max-width: 768px) {
+  
+  
+  
+  @media (max-width: 991px) {
     #rowContainer {
       display: flex;
       flex-direction: column;
+      margin-right: 45px;
+      justify-content: space-around;
+      align-items: center;
     }
   
     #imgTest {
       order: -1;
+      width: 100%;
+      height: 350px;
+      object-fit: contain;
+      padding: 30px;
+      
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .container .footer{
+        display: grid;
+      }
+    }
+  
+    #idContactanos{
+      text-align:center;
+      color:var(--color-two);
+    }
+  
+    #imgTest{
       max-width: 100%;
       height: auto;
       object-fit: contain;
       padding: 30px;
     }
   
+  
+    /*
+    Establezco el valor del boton en display y block, para que abarque todo el ancho disponible
+    y el margin en auto para centrarlo de forma horizontal al contonedor
+    */
+  
+    button#btnEnviar {
+      display: block;
+      margin: auto;
+      width: auto;
+      margin-bottom: 10px;
+    }
+  
+    /*
+    Añado un padding al valor por defecto en una PC en el formulario
+    */
     #formTest{
-      order: 1;
-      padding: 30px;
+      padding-right: 30px;
+    }
+  
+    /*
+   Esto hará que la imagen se ajuste 
+   al ancho y al alto del contenedor sin distorsión y mantenga su 
+   proporción de aspecto original cuando la pantalla tenga un ancho de menos de 768px.
+  
+   El display flex en el rowContainer es una regla para el contenedor padre
+   y con la propiedad flex-direction:colum indico que los elementos 
+   se deben apilarse en columnas en lugar de filas y así hago el efecto de que la imagen
+   se coloque encima del formulario en dispositivos pequeños
+  
+   En el #imgTest la propiedad order -1 se mostrara antes que el elemento que tenga order 1
+   en este caso el formulario
+   El max-width 100% permite que la imagen se ajuste al ancho del contenedor,
+   y para que tenga su proporcion original uso el height:auto y para que no se distorcione
+   uso el object-fit: contain
+    */
+  
+    @media (max-width: 768px) {
+      #rowContainer {
+        display: flex;
+        flex-direction: column;
+        margin-right: 45px;
+      }
+    
+      #imgTest {
+        order: -1;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        padding: 30px;
+      }
+    
+      #formTest{
+        order: 1;
+        padding: 30px;
+        
+      }
+      
+      /*
+      Los dos puntos  "::" en esta parte significa que le estoy dando un estilo a una 
+      parte en especifico que es el placeholder del input, y con el text-aling:left
+      hago que las letras del placeholder se vayan al inicio del label. 
+      */
+      input::placeholder {
+        text-align: left;
+      }
       
     }
-    
-    /*
-    Los dos puntos  "::" en esta parte significa que le estoy dando un estilo a una 
-    parte en especifico que es el placeholder del input, y con el text-aling:left
-    hago que las letras del placeholder se vayan al inicio del label. 
-    */
-    input::placeholder {
-      text-align: left;
-    }
-    
+  
+  /* ---------------------------
+  Estilos para página inicio de sesión
+  ------------------------------*/
+  
+  .recordar{
+    margin: -5px 0 20px 5px;
+    color: blue;
+    cursor: pointer;
   }
-
-/* ---------------------------
-Estilos para página inicio de sesión
-------------------------------*/
-
-.recordar{
-  margin: -5px 0 20px 5px;
-  color: blue;
-  cursor: pointer;
-}
-.recordar:hover{
-  text-decoration: underline;
-}
-
-.error{
-  display: none;
-  font-size: 0.7rem;
-  color: red;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin: 0;
-  text-align: left;
-}
-
-
-#idRegistro{
-  text-align:center;
-  color:var(--color-two);
-}
+  .recordar:hover{
+    text-decoration: underline;
+  }
+  
+  .error{
+    display: none;
+    font-size: 0.7rem;
+    color: red;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 5px;
+    text-align: left;
+  }
+  
+  
+  #idRegistro{
+    text-align:center;
+    color:var(--color-two);
+  }

@@ -1,0 +1,621 @@
+
+/* ----------------
+|      Reset       |
+-------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+    }
+    
+    /* ----------------
+    |   Main Styling   |
+    -------------------*/
+    
+    body {
+    
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+    min-height: 100hv;
+    }
+    
+    
+    /* ----------------
+    |      Nav         |
+    -------------------*/
+    
+    nav {
+    background-color: rgb(252, 252, 252);
+    position: fixed;
+    }
+    
+    nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    nav ul li{
+    margin: 0px 40px;
+    }
+    
+    /* ----------------
+    |      Header      |
+    -------------------*/
+    
+    header {
+    background: url('../assets/portada.png');
+    background-repeat: no-repeat;
+    text-align: left;
+    width: 100%;
+    height: auto;
+    background-size:101%;
+    overflow: hidden;
+    border-radius: 100 0 85% 85% / 25%;
+    }
+    
+    header .overlay h1{
+    width: 100%;
+    height: 100%;
+    margin-left: 200px;
+    margin-top: 50px;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px #333;
+    }
+
+    header .overlay h2{
+        width: 100%;
+        height: 100%;
+        margin-left: 200px;
+        font-size: 50px;
+        color: rgb(0, 0, 0);
+        text-shadow: 1px 1px 1px #333;
+        }
+
+    header .overlay p{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        margin-left: 200px;
+        color: rgb(0, 0, 0);
+          }
+
+
+    .btn-about {
+    border-radius: 10px;
+    border-color: var(--color-one);
+    outline: none;
+    margin-left: 200px;
+    padding: 10px 20px;
+    color: var(--color-one);
+    background: #fff;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 20px 0 #0000003b;
+    }
+    .btn-about :hover{
+    cursor: pointer;
+    color: white;
+    background-color: #0049B4;
+    }
+    
+    @media (max-width: 1258px){
+        header {
+        
+            background: url('../assets/portada.png');
+            background-position-x: -20px;
+            background-position-y: 50px;
+            background-size: 135%;
+            text-align: left;
+            height: auto;
+            background-size:101%;
+        
+            }
+            
+            header .overlay h1{
+            width: 100%;
+            height: 100%;
+            margin-left: 100px;
+            margin-top: 50px;
+            font-size: 50px;
+            color: rgb(0, 0, 0);
+            text-shadow: 1px 1px 1px #333;
+            }
+        
+            header .overlay h2{
+                width: 100%;
+                height: 100%;
+                margin-left: 100px;
+                font-size: 50px;
+                color: rgb(0, 0, 0);
+                text-shadow: 1px 1px 1px #333;
+                }
+        
+            header .overlay p{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                margin-left: 100px;
+                color: rgb(0, 0, 0);
+                  }
+        
+            .btn-about {
+            border-radius: 10px;
+            border-color: var(--color-one);
+            outline: none;
+            margin-left: 100px;
+            padding: 10px 20px;
+            color: var(--color-one);
+            background: #fff;
+            margin-bottom: 50px;
+            box-shadow: 0 3px 20px 0 #0000003b;
+            }
+            .btn-about :hover{
+            cursor: pointer;
+            color: white;
+            background-color: #0049B4;
+            }
+       
+    }
+
+
+    @media (max-width: 1071px){
+        header {
+        
+            background: url('../assets/portada.png');
+            background-repeat: no-repeat;
+            background-position-x: -10px;
+            background-position-y: 80px;
+            background-size: 135%;
+            text-align: left;
+            height: auto;
+            background-size:101%;
+        
+            }
+            
+            header .overlay h1{
+            width: 100%;
+            height: 100%;
+            margin-left: 100px;
+            margin-top: 50px;
+            font-size: 50px;
+            color: rgb(0, 0, 0);
+            text-shadow: 1px 1px 1px #333;
+            }
+        
+            header .overlay h2{
+                width: 100%;
+                height: 100%;
+                margin-left: 100px;
+                font-size: 50px;
+                color: rgb(0, 0, 0);
+                text-shadow: 1px 1px 1px #333;
+                }
+        
+            header .overlay p{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                margin-left: 100px;
+                color: rgb(0, 0, 0);
+                  }
+        
+            .btn-about {
+            border-radius: 10px;
+            border-color: var(--color-one);
+            outline: none;
+            margin-left: 100px;
+            padding: 10px 20px;
+            color: var(--color-one);
+            background: #fff;
+            margin-bottom: 50px;
+            box-shadow: 0 3px 20px 0 #0000003b;
+            }
+            .btn-about :hover{
+            cursor: pointer;
+            color: white;
+            background-color: #0049B4;
+            }
+       
+    }
+
+
+
+
+
+    @media (max-width: 964px){
+        header {
+            background: url('../assets/Captura\ de\ pantalla\ 2023-01-25\ 233955.png');
+            background-repeat: no-repeat;
+            background-position-x: -50px;
+            background-position-y: 0px;
+            background-size: 135%;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            border-radius: 100 0 85% 85% / 25%;
+            }
+            
+            header .overlay{
+        
+                background-image: linear-gradient( 135deg, #ffffffda 10%, #e6f4f1d2 100%);
+            }
+
+            header .overlay h1{
+            
+            width: 100%;
+            height: 100%;
+           
+            margin-left: 0px;
+            margin-top: 0px;
+            padding-top: 10px;
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            text-shadow: 1px 1px 1px #333;
+            }
+        
+            header .overlay h2{
+                
+                width: 100%;
+                height: 100%;
+                margin-left: 0px;
+               
+                font-size: 30px;
+                color: rgb(0, 0, 0);
+                text-shadow: 1px 1px 1px #333;
+                }
+        
+            header .overlay p{
+                width: 100%;
+                height: 100%;
+                margin-top: 0px;
+                margin-left: 0px;
+                align-items: center;
+                color: rgb(0, 0, 0);
+                  }
+        
+            .btn-about {
+            border-radius: 10px;
+            border-color: var(--color-one);
+            outline: none;
+            margin-left: 0px;
+            padding: 10px 20px;
+            color: var(--color-one);
+            background: #fff;
+            margin-bottom: 6.5px;
+            box-shadow: 0 3px 20px 0 #0000003b;
+            }
+
+            .btn-about :hover{
+            cursor: pointer;
+            color: white;
+            background-color: #0049B4;
+            }
+       
+    }
+
+    @media (max-width: 432px){
+        header {
+            background: url('../assets/Captura\ de\ pantalla\ 2023-01-25\ 233955.png');
+            background-repeat: no-repeat;
+            background-position-x: -20px;
+            background-position-y: 120px;
+            background-size: 135%;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            border-radius: 100 0 85% 85% / 25%;
+            }
+            
+            header .overlay{
+        
+                background-image: linear-gradient( 135deg, #ffffffda 10%, #e6f4f1d2 100%);
+            }
+
+            header .overlay h1{
+            
+            width: 100%;
+            height: 100%;
+           
+            margin-left: 0px;
+            margin-top: 0px;
+            padding-top: 10px;
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            text-shadow: 1px 1px 1px #333;
+            }
+        
+            header .overlay h2{
+                
+                width: 100%;
+                height: 100%;
+                margin-left: 0px;
+               
+                font-size: 30px;
+                color: rgb(0, 0, 0);
+                text-shadow: 1px 1px 1px #333;
+                }
+        
+            header .overlay p{
+                width: 100%;
+                height: 100%;
+                margin-top: 0px;
+                margin-left: 0px;
+                align-items: center;
+                color: rgb(0, 0, 0);
+                  }
+        
+            .btn-about {
+            border-radius: 10px;
+            border-color: var(--color-one);
+            outline: none;
+            margin-left: 0px;
+            padding: 10px 20px;
+            color: var(--color-one);
+            background: #fff;
+            margin-bottom: 6.5px;
+            box-shadow: 0 3px 20px 0 #0000003b;
+            }
+
+            .btn-about :hover{
+            cursor: pointer;
+            color: white;
+            background-color: #0049B4;
+            }
+       
+    }
+
+
+
+/* Tarjetas*/
+
+
+.container__cards{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.card{
+    
+    width: 500px;
+    margin: 10px;
+    transition: all 300ms;
+}
+
+.card:hover{
+    width: 500px;
+}
+
+.card .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .cover img{
+    width: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+.card:hover .cover img{
+    top: 0px;
+    filter: none;
+}
+
+.card .img__back{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+
+.card:nth-of-type(1) .img__back{
+    background-image: url(../assets/Diseño\ sin\ título\(5\).png);
+}
+
+.card:nth-of-type(2) .img__back{
+    background-image: url(../assets/2222222.png);
+}
+
+
+.card:hover .img__back{
+    bottom: -40px;
+}
+
+.card .description{
+    background: white;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+}
+
+.card:hover .description{
+    padding: 40px;
+}
+
+.card .description h2{
+    margin-top: 10px;
+}
+
+.card .description p{
+    margin-top: 10px;
+   
+}
+
+.card .description input{
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    background: #35a699;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+}
+
+.card .description input:hover{
+    background: #4775d8;
+}
+
+@media (max-width: 1038px){
+    .container__cards{
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+
+    }
+
+
+
+
+
+    /* INFO*/
+
+    .info h3{
+
+        
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-right: 1000px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    
+    text-align: center;    
+
+    }
+
+    .container__cards{
+        max-width: 1200px;
+        
+        margin-top: 100px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+    }
+    
+    .card2{
+        
+        width: 300px;
+        margin: 10px;
+        transition: all 300ms;
+        
+    }
+    
+
+.card2 .cover2{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card2 .cover2 img{
+    width: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+
+
+.card2 .img__back2{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+
+.card2:nth-of-type(1) .img__back2{
+    background-image: url(../assets/BAC2.png);
+}
+
+.card2:nth-of-type(2) .img__back2{
+    background-image: url(../assets/BAC2.png);
+}
+
+.card2:nth-of-type(3) .img__back2{
+    background-image: url(../assets/BAC2.png);
+}
+
+.card2:hover .img__back2{
+    bottom: -40px;
+}
+
+.card2 .description2{
+    background: white;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+}
+
+
+.card2 .description2 h2{
+    margin-top: 10px;
+}
+
+.card2 .description2 p{
+    margin-top: 10px;
+}
+
+.card2 .description2 input{
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    background: #35a699;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+}
+
+
+
+@media (max-width: 1038px){
+    .container__cards2{
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+
+    }
