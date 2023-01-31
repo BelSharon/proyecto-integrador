@@ -232,4 +232,4 @@ addItem({'titulo':'Mi primer publicación',
 //     'img':'https://elgiroscopo.es/wp-content/uploads/2019/02/taller_alebrijes_tilcajete.jpg',
 //     'description':'El día de hoy comencé un nuevo taller con grandes maestros para la elaboración de alebrijes y tallado artesanal',
 //     'date' : '3 de enero de 2022'});   
-    
+
