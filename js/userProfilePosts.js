@@ -115,6 +115,7 @@ $formpost.addEventListener('submit', function (event) {
 
                 
             // }, 2000);
+            swal("¡Felicidades!", "¡Tu publicación ha sido realizada!", "success");
 
             let nuevaPublicacion = {
                 titulo: titulo.value,

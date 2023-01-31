@@ -86,10 +86,11 @@ document.getElementById('form')
                 correo.style.border = "";
                 telefono.style.border = "";
                 mensaje.style.border = "";
-                alertCorrecto.innerHTML = "¡Tu mensaje se ha enviado correctamente!";
-                alertCorrecto.style.display = "block";
+                swal("Gracias por contactarnos","¡Tu mensaje se ha enviado correctamente!", "success");
+              //  alertCorrecto.innerHTML = "¡Tu mensaje se ha enviado correctamente!";
+              //  alertCorrecto.style.display = "block";
                 formulario.reset();
-            }, 2000);
+            }, 1000);
         }
     });
             // .then(() => {
