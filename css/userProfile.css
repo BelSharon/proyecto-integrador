@@ -68,6 +68,10 @@
   grid-template-columns: 1fr 2fr;
   background-color: #E6F4F1;
   margin-top: 15px;
+  justify-content: center;
+  border: solid 0.9px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  width: 90%;
 }
 
 .photoUser img{
@@ -87,6 +91,7 @@
 .descriptionUser{
   margin: 15px;
   padding: 50px;
+  text-align: left;
 }
 
 /* Estilos para nueva publicación*/
