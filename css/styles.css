@@ -47,7 +47,8 @@
   nav {
   background-color: rgb(251, 251, 251);
   position: fixed;
-  }
+  border-bottom: solid 0.9px #33333386;
+}
   
   nav ul {
   height: 100%;
