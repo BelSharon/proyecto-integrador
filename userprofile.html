@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/userprofilepost.css">
+    
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/userProfile.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"> <img src="./assets/img/Logo_tagtalent.png" width="110" height="50"
+                        alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                href="./index.html">Inicio</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="./publicaciones.html">Publicaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contactus.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./aboutus.html">Sobre nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-end">
+                    <a type="button" class="btn btn-outline-primary me-2" href="./userRegister.html">Regístrate</a>
+                    <a type="button" class="btn btn-primary" href="./login.html">Inicia Sesión</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img src="./assets/jose.png" alt="img-avatar">
+                
+                    </button>
+                </div>
+               <!--  <button type="button" class="boton-portada">
+                    <i class="far fa-image"></i> Cambiar fondo
+                </button> -->
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <br>
+            <div class="perfil-usuario-bio">
+                <br>
+                <h3 class="titulo"><strong>José Martínez</strong></h3>
+                <br>
+                <p class="texto">Soy un carpintero de 25 años, realizo trabajos desde los más sencillos hasta trabajos con acabados más complejos que se puedan utilizar como decoración en el hogar.</p>
+            </div>
+            <div class="perfil-usuario-footer">
+                <ul class="lista-datos">
+                    <li><i class="icono fas fa-phone-alt"></i> Telefono: 55 35 26 66 89</li>
+                    <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion: Gustavo A. Madero</li>
+                    <li><i class="icono fas fa-user-check"></i> Correo Electrónico: josem@gmail.com</li>
+                </ul>
+    
+            </div>
+            <div class="redes-sociales">
+                <a href="" class="boton-redes twitter fab fa-whatsapp"><i class="icon-twitter"></i></a>
+                <a href="" class="boton-redes instagram fab fa-instagram"><i class="icon-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Nueva publicación-->
+<div class="container_pub">
+    <div class="list-post">
+          <form action="" class="" id="formulariopost">
+              <div id="alertError" class="alert alert-danger" role="alert"  style="display: none;"></div>
+              <div class="container-header-create">
+                  <span>Crea tu publicación</span>
+                  <span id="cerraroverlay" style="font-weight: 600 ;cursor: pointer;display: none;" >x</span>
+              </div>
+              <div class="container-post-create">
+                  <figure>
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLXM3HqDEZ71mtnsAE36rKPcuQlkt6Q9EaDg&usqp=CAU" alt="">
+                  </figure>
+                  <div class="container-input">
+                      <input id="titulo_id" name="titulo" type="text" placeholder="Publica tu trabajo" autocomplete="off">
+                  </div>
+              </div>
+              <div>
+                  <textarea id="publicacion_id" class="form-control input-group-text" style="text-align: left;"  rows="3" name="publicacion" placeholder="Descripción"></textarea>
+              </div>
+              <div style="background: white;padding: 10px 10px 0px 10px;">
+                  <div class="container-img-preview">
+                      <img src="" alt="" id="previewimage">
+                  </div>
+              </div>
+              <div id="cargaImgBtn" style="background: white;padding: 10px;">
+                  <div class="container-input-file">
+                      <div class="input-txt">
+                          <div class="img-photo">
+                              <span class="material-symbols-outlined">
+                                  imagesmode
+                              </span>
+                          </div>
+                          <span class="txt-photo">Imagen</span>
+                      </div>
+                      <input id="fileimg" type="file" class="fileimg"  onchange="previsualizarImagen()">
+                  </div>
+              </div>
+              <div style="background: #ffffff;padding: 10px 10px 10px 10px;">
+                  <button type="submit" class="btn-submit">Publicar</button>
+              </div>
+          
+          </form>
+          <div class="overlay" id="overlay"></div>        
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+      <!--Publicaciones-->
+      <div class="text-center"> 
+          <h2>Mis trabajos</h2><br>
+      </div>
+  
+  <!--Prueba Cards-->
+  <div class="row justify-content-center">
+      <div class="col1" >
+          <div id=item-publicaciones class="row1" >   
+              
+          </div>
+      </div>
+  </div>
+  
+
+
+  <br>
+    <br>
+    <br>
+    <!--Footer-->
+       
+</section>
+         
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+  <hr>
+  <div class="row primary" >
+    <div class="column about">
+  
+    <h3>Tag Talent</h3>
+    <ul>
+      <li>
+       <a href="./login.html">"Conectandote con tu empleo"</a>
+      </li>
+   </div>
+  
+  <div class="column links">
+  <h3>Enlaces</h3>
+   <ul>
+    <li>
+     <a href="https://github.com/BelSharon/proyecto-integrador">Acerca de</a>
+    </li>
+    <li>
+     <a href="./avisoPrivacidad.html">Política de privacidad</a>
+    </li>
+    <li>
+     <a href="#terms-of-services">Preguntas Frecuentes</a>
+    </li>
+             </ul>
+  
+  </div>
+  
+  <div class="column links">
+    <h3>Contacto</h3>
+     <ul>
+      <li>
+       <a href="https://goo.gl/maps/sVf9QXB1q5WqjByc6">Ciudad de México, México</a>
+      </li>
+      <li>
+       <a href="./contactus.html">info@tagtalent.com </a>
+      </li>
+      <li>
+      <a href="#terms-of-services">+ 01 234 567 88</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="column subscribe">
+   <h3>Redes</h3>
+  
+    <div class="social">
+      <a href="https://github.com/BelSharon/proyecto-integrador/tree/develop" target="_blank"><i class="fa-brands fa-github-square"></a></i>
+      <a href="https://instagram.com/tag_talent_?igshid=ZmZhODViOGI=" target="_blank"><i class="fa-brands fa-instagram-square"></a></i>
+      <a href="https://youtu.be/ZEd8NXuFusU" target="_blank"><i class="fa-brands fa-youtube-square"></a></i>
+      <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp-square"></a></i>
+    </div>
+
+  </div>       
+  </div>
+  
+  <div class="row copyright">
+    <div class="footer-menu">
+
+    <a href="./index.html">Inicio</a>
+    <a href="./contactus.html">Contáctanos</a>
+    <a href="./userRegister.html">Registro</a>
+    <a href="./login.html">Inicia Sesión</a>
+    </div>
+     <p>Copyright &copy; 2023 Tag Talent</p>
+  </div>
+  </footer>
+  
+</section>
+</main>
+</div>
+
+  
+  <script src="https://kit.fontawesome.com/410c78c342.js" crossorigin="anonymous"></script>
+  <script src="./js/userProfilePosts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

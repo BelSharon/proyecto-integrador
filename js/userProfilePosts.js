@@ -115,13 +115,13 @@ $formpost.addEventListener('submit', function (event) {
 
                 
             // }, 2000);
-            swal("¡Felicidades!", "¡Tu publicación ha sido realizada!", "success");
 
             let nuevaPublicacion = {
                 titulo: titulo.value,
                 descripcion: publicacion.value, 
                 imagen: $readfile.result,
-                fecha: new Date().toLocaleDateString()
+                fecha: new Date().toLocaleDateString(),
+                totalReacciones: 0
             }
 
             addItem(nuevaPublicacion);
@@ -150,33 +150,32 @@ function addItem(item){
         publicaciones.unshift(item)
         localStorage.setItem('publicacion', JSON.stringify(publicaciones))      
         console.log(publicaciones);
-        cargarCarrusel();
+        cargarPublicacion();
         
     }
 
-function cargarCarrusel() {
-    const itemsContainer = document.getElementById("list-items");
-    let active = ''
+function cargarPublicacion() {
+    const itemsContainer = document.getElementById("item-publicaciones");
     let contador = 1;
-    itemsContainer.innerHTML = '';
+        itemsContainer.innerHTML = '';
 
-    publicaciones.forEach(item => {
-        if (contador === 1) {
-            active = 'active'
-        } else {
-            active = ''
-        }
+    publicaciones.forEach(item => { 
     
-        const itemHTML = 
-            '   <div class="carousel-item ' + active + '">\n' +
-            '   <img src="'+item.imagen +'" class="card-img-top" alt="" height="450px"> \n' + 
-            '   <div class="card-body"> \n' +
-            '       <h5 class="card-title">'+item.titulo+'</h5>' +
-            '       <p class="card-text">'+item.descripcion+'</p>' +
-            '        <p class="card-text"><small class="text-muted">'+item.fecha+'</small></p>' +            
-                '</div> \n'+ 
-                '</div> \n'; 
-            
+        const itemHTML = '<div class="col">' +
+          '<div class="card">' +
+                '<img src="' + item.imagen+'" class="card-img-top" alt="...">' +
+                '<div class="card-body">' +
+                  '<h5 class="card-title">' + item.titulo + '</h5>' +
+                  '<p class="card-text">' + item.descripcion + '</p>' +
+                  '<p class="card-text">' + item.fecha +'</p>' +                  
+                  '<div class="input-group">'+
+                    '<span class="material-symbols-outlined mano" >favorite</span>'+
+                    '<label>' + item.totalReacciones + '</label>'+
+                  '</div>' +  
+                '</div>' + 
+              '</div>' +
+            '</div>';            
+                
             itemsContainer.innerHTML += itemHTML;  
             contador++  
     })
@@ -186,7 +185,9 @@ function cargarCarrusel() {
 addItem({'titulo':'Mi primer publicación',
     'imagen':'https://st2.depositphotos.com/3283693/11306/i/450/depositphotos_113066824-stock-photo-carpenter-man-working.jpg',
     'descripcion':'Terminando detalles para la colocación de un closet',
-    'fecha' : `${new Date().toLocaleDateString()}`});
+    'fecha' : `${new Date().toLocaleDateString()}`,
+    'totalReacciones': 13
+});
 
 // addItem({'name':'Mi taller',
 //     'img':'https://media.istockphoto.com/id/1061179190/es/foto/taller-de-carpinter%C3%ADa-sin-gente.jpg?s=612x612&w=0&k=20&c=zeNf-MiWbNjl2L88KM2smW3jCN-eKijPhqWoY7unrN4=',
@@ -232,4 +233,4 @@ addItem({'titulo':'Mi primer publicación',
 //     'img':'https://elgiroscopo.es/wp-content/uploads/2019/02/taller_alebrijes_tilcajete.jpg',
 //     'description':'El día de hoy comencé un nuevo taller con grandes maestros para la elaboración de alebrijes y tallado artesanal',
 //     'date' : '3 de enero de 2022'});   
-
+    
