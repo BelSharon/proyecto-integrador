@@ -71,7 +71,7 @@
   nav {
   background-color: rgb(251, 251, 251);
   position: fixed;
-  border-bottom: solid 0.9px #33333386;
+  border-bottom: solid 0.9px #8ccfe8;
 }
   
   nav ul {
@@ -295,4 +295,36 @@
   #idRegistro{
     text-align:center;
     color:var(--color-two);
+  }
+
+
+
+  @media screen and (max-width: 977px) {
+
+    #colContainer img{
+      width: 400px;
+      
+     }
+
+.row{
+  margin-left: 10px;
+}
+
+    #colContainer2 img{
+     width: 220px;
+     
+    }
+    
+    
+  }
+
+
+
+  @media screen and (max-width: 840px) {
+    #colContainer2 img{
+      margin-top: -75px;
+     width: 220px;
+     
+    }
+    
   }
