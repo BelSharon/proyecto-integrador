@@ -14,7 +14,8 @@ document.getElementById('formTest')
         alertError.innerHTML = "";
 
         if (arrayDatos.some((s)=> {return s.correo==emailView && s.password== contrasenaView})) {
-            console.log("Debo direccionar al perfil de usuario");
+         
+            window.location.replace("http://127.0.0.1:5512/userprofile.html");
            
         } else {
 
