@@ -193,7 +193,7 @@ addItem({'titulo':'Mi primer publicación',
 
 addItem({'titulo':'Tocador Vanity',
     'imagen':'https://www.todomuebles.mx/media/catalog/product/cache/b81a1b2a56bfe90c694e04b07f68d609/f/o/foto_principal_comoda-com-luna-160cm-love-blanco-vanity-moderno-decorado-rad36272k1-1_1.jpg',
-    'descripcion':'Acabado e instalación eléctrica de Tocador Vanity con ',
+    'descripcion':'Acabado e instalación eléctrica de Tocador Vanity',
     'fecha' : `${new Date().toLocaleDateString()}`,
     'totalReacciones': 15
 });
