@@ -268,9 +268,11 @@ i{
   
   .card-img-top{
     width: 330px;
+    height: 220px;
     margin: 10px;
     align-items: center;
   }
+  
   
   
 /* Estilos para el color */

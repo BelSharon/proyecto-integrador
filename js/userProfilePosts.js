@@ -182,12 +182,47 @@ function cargarPublicacion() {
 }
 
 /*Se quedó una imagen para poder visualizar el carrusel*/
+
+
 addItem({'titulo':'Mi primer publicación',
     'imagen':'https://st2.depositphotos.com/3283693/11306/i/450/depositphotos_113066824-stock-photo-carpenter-man-working.jpg',
     'descripcion':'Terminando detalles para la colocación de un closet',
     'fecha' : `${new Date().toLocaleDateString()}`,
+    'totalReacciones': 5
+});
+
+addItem({'titulo':'Tocador Vanity',
+    'imagen':'https://www.todomuebles.mx/media/catalog/product/cache/b81a1b2a56bfe90c694e04b07f68d609/f/o/foto_principal_comoda-com-luna-160cm-love-blanco-vanity-moderno-decorado-rad36272k1-1_1.jpg',
+    'descripcion':'Acabado e instalación eléctrica de Tocador Vanity con ',
+    'fecha' : `${new Date().toLocaleDateString()}`,
+    'totalReacciones': 15
+});
+
+
+addItem({'titulo':'Escritorio de Madera',
+    'imagen':'https://cdn.shopify.com/s/files/1/0563/8937/0056/products/Modelo00007-M_1400x.jpg?v=1626469517',
+    'descripcion':'Terminando detalles para la colocación de un closet',
+    'fecha' : `${new Date().toLocaleDateString()}`,
     'totalReacciones': 13
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // addItem({'name':'Mi taller',
 //     'img':'https://media.istockphoto.com/id/1061179190/es/foto/taller-de-carpinter%C3%ADa-sin-gente.jpg?s=612x612&w=0&k=20&c=zeNf-MiWbNjl2L88KM2smW3jCN-eKijPhqWoY7unrN4=',
